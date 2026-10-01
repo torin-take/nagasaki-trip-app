@@ -3,7 +3,7 @@
 // 数値・ロジックは Nagasaki Eats Walk Rings 仕様書の support.js 準拠。
 
 // ホテル（ドーミーイン長崎新地中華街）の座標
-export const HOTEL = { lat: 32.7424, lng: 129.8768 }
+export const HOTEL = { lat: 32.74223140320781, lng: 129.87632802131992 }
 
 // 徒歩速度の近似（分速75m ÷ 1.3 の補正＝信号待ち等を考慮した体感速度）
 const WALK_SPEED_PER_MIN = 75 / 1.3
