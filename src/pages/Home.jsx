@@ -47,9 +47,9 @@ export default function Home() {
 
   const openShop = (id) => navigate(`/shop/${id}`)
 
-  const [placeName, placeArea] = t('place', lang)
-    .split('·')
-    .map((s) => s.trim())
+  // ホテル名はロゴ同様、言語を切り替えても英語表記のまま（エリア名だけ現地語に追従）。
+  const placeName = 'Dormy Inn'
+  const placeArea = t('place', lang).split('·')[1]?.trim() || ''
 
   return (
     <main className="relative flex h-dvh flex-col overflow-hidden bg-night font-body text-white">
