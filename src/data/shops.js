@@ -19,9 +19,12 @@
 //   { en, ja, zhCN, zhTW, ko } の多言語オブジェクトになっている。
 //   表示側は LanguageContext.jsx の pickText(value, lang) を通して参照し、
 //   訳が無い言語ではenにフォールバックする。
-//   店名・カテゴリー・エリア名・メニュー品目名は翻訳対象外（英語のまま）。
-//   ⚠️ 説明文の翻訳はAIによる下訳です。実在店の情報として公開する前に、
-//      各言語のネイティブ話者による確認・校正を強く推奨します。
+//   店名（nameI18n）・エリア名（areaI18n）・メニュー品目名（menu[].nameI18n）も
+//   同様に { en, ja, zhCN, zhTW, ko } を持つ（表示側は `obj?.[lang] || obj.en` で参照）。
+//   category は CATEGORY_LABEL（walkRingsText.js）で表示側が変換する。
+//   住所（address）だけは日本語のまま（タクシーや店員に見せて使うため意図的に翻訳しない）。
+//   ⚠️ 説明文・店名・エリア名・メニュー品目名の翻訳はAIによる下訳です。実在店の情報として
+//      公開する前に、各言語のネイティブ話者による確認・校正を強く推奨します。
 
 export const shops = [
   {
@@ -33,6 +36,7 @@ export const shops = [
     category: 'Izakaya',
     area: 'Dōza-machi, Nagasaki',
     areaJa: '長崎市銅座町',
+    areaI18n: { en: 'Dōza-machi, Nagasaki', zhCN: '长崎铜座町', zhTW: '長崎銅座町', ko: '나가사키 도자마치', ja: '長崎市銅座町' },
 
     // 現・仮マップ用の位置（%座標）
     map: { x: 56, y: 42 },
@@ -97,6 +101,7 @@ export const shops = [
         id: 'sashimi',
         name: 'Assorted sashimi platter',
         nameJa: '刺身盛り合わせ',
+        nameI18n: { en: 'Assorted sashimi platter', zhCN: '什锦生鱼片拼盘', zhTW: '什錦生魚片拼盤', ko: '모둠 사시미', ja: '刺身盛り合わせ' },
         romaji: 'Sashimi moriawase',
         price: 'Approx. ¥1,600 – ¥2,000',
         img: 'menu1.jpg',
@@ -124,6 +129,7 @@ export const shops = [
         id: 'turban-shell',
         name: 'Grilled Turban Shell',
         nameJa: 'さざえの壺焼き',
+        nameI18n: { en: 'Grilled Turban Shell', zhCN: '烤海螺', zhTW: '烤海螺', ko: '소라 구이', ja: 'さざえの壺焼き' },
         romaji: 'Sazae no tsuboyaki',
         price: '¥1,180',
         img: 'menu2.jpg',
@@ -146,6 +152,7 @@ export const shops = [
         id: 'wagyu-steak',
         name: 'Wagyu Steak',
         nameJa: '和牛ステーキ',
+        nameI18n: { en: 'Wagyu Steak', zhCN: '和牛牛排', zhTW: '和牛牛排', ko: '와규 스테이크', ja: '和牛ステーキ' },
         romaji: 'Wagyū sutēki',
         price: '¥1,700',
         img: 'menu3.jpg',
@@ -173,6 +180,7 @@ export const shops = [
         id: 'hatoshi',
         name: 'Hatoshi',
         nameJa: 'ハトシ',
+        nameI18n: { en: 'Hatoshi', zhCN: '虾多士', zhTW: '蝦多士', ko: '하토시 (새우 토스트)', ja: 'ハトシ' },
         romaji: 'Hatoshi',
         price: '¥680',
         img: 'menu4.jpg',
@@ -203,6 +211,7 @@ export const shops = [
     category: 'Bar',
     area: 'Near Nagasaki Station',
     areaJa: '長崎駅周辺',
+    areaI18n: { en: 'Near Nagasaki Station', zhCN: '长崎站附近', zhTW: '長崎站附近', ko: '나가사키역 근처', ja: '長崎駅周辺' },
 
     // 現・仮マップ用の位置（%座標）※長崎駅寄り（港側）に配置
     map: { x: 16, y: 20 },
@@ -258,6 +267,7 @@ export const shops = [
       {
         id: 'guinness',
         name: 'Guinness Draught',
+        nameI18n: { en: 'Guinness Draught', zhCN: '健力士生啤', zhTW: '健力士生啤', ko: '기네스 생맥주', ja: 'ギネス生' },
         price: 'Approx. ¥1,320',
         img: 'menu1.jpg',
         description: {
@@ -281,6 +291,7 @@ export const shops = [
       {
         id: 'fish-and-chips',
         name: 'Fish & Chips',
+        nameI18n: { en: 'Fish & Chips', zhCN: '炸鱼薯条', zhTW: '炸魚薯條', ko: '피시 앤 칩스', ja: 'フィッシュ＆チップス' },
         price: 'Large ¥1,100 / Small ¥660',
         img: 'menu2.jpg',
         description: {
@@ -324,6 +335,7 @@ export const shops = [
       {
         id: 'nagasaki-pickles',
         name: 'Nagasaki Pickles',
+        nameI18n: { en: 'Nagasaki Pickles', zhCN: '长崎风味泡菜', zhTW: '長崎風味泡菜', ko: '나가사키 피클', ja: '長崎風ピクルス' },
         price: 'Approx. ¥550',
         img: 'menu4.jpg',
         description: {
@@ -350,6 +362,7 @@ export const shops = [
     category: 'Cafe',
     area: 'Near Shianbashi',
     areaJa: '思案橋周辺',
+    areaI18n: { en: 'Near Shianbashi', zhCN: '思案桥附近', zhTW: '思案橋附近', ko: '시안바시 근처', ja: '思案橋周辺' },
 
     // 現・仮マップ用の位置（%座標）※思案橋寄り
     map: { x: 36, y: 80 },
@@ -405,6 +418,7 @@ export const shops = [
       {
         id: 'base-burger',
         name: 'Signature BASE Burger',
+        nameI18n: { en: 'Signature BASE Burger', zhCN: 'BASE招牌汉堡', zhTW: 'BASE招牌漢堡', ko: 'BASE 시그니처 버거', ja: 'BASE特製バーガー' },
         price: 'Approx. ¥1,150',
         img: 'menu1.jpg',
         description: {
@@ -431,6 +445,7 @@ export const shops = [
       {
         id: 'berry-french-toast',
         name: 'Berry French Toast',
+        nameI18n: { en: 'Berry French Toast', zhCN: '莓果法式吐司', zhTW: '莓果法式吐司', ko: '베리 프렌치토스트', ja: 'ベリーのフレンチトースト' },
         price: 'Approx. ¥1,150',
         img: 'menu2.jpg',
         description: {
@@ -457,6 +472,7 @@ export const shops = [
       {
         id: 'hamburger-doria',
         name: 'Tomato Sauce Hamburger Doria',
+        nameI18n: { en: 'Tomato Sauce Hamburger Doria', zhCN: '番茄酱汉堡排焗饭', zhTW: '番茄醬漢堡排焗飯', ko: '토마토 소스 함박 도리아', ja: 'トマトソースハンバーグドリア' },
         price: 'Approx. ¥1,000',
         img: 'menu3.jpg',
         description: {
@@ -483,6 +499,7 @@ export const shops = [
       {
         id: 'design-latte',
         name: 'Design Latte',
+        nameI18n: { en: 'Design Latte', zhCN: '拉花拿铁', zhTW: '拉花拿鐵', ko: '디자인 라떼', ja: 'デザインラテ' },
         price: 'Coffee from approx. ¥500',
         img: 'menu4.jpg',
         description: {
@@ -516,6 +533,7 @@ export const shops = [
     category: 'Bar',
     area: 'Shianbashi',
     areaJa: '思案橋',
+    areaI18n: { en: 'Shianbashi', zhCN: '思案桥', zhTW: '思案橋', ko: '시안바시', ja: '思案橋' },
 
     // 現・仮マップ用の位置（%座標）※思案橋エリア
     map: { x: 84, y: 76 },
@@ -574,6 +592,7 @@ export const shops = [
       {
         id: 'house-cocktails',
         name: 'Special House Cocktails',
+        nameI18n: { en: 'Special House Cocktails', zhCN: '特调鸡尾酒', zhTW: '特調雞尾酒', ko: '스페셜 하우스 칵테일', ja: 'スペシャルハウスカクテル' },
         price: 'Approx. ¥800',
         img: 'menu1.jpg',
         description: {
@@ -591,6 +610,7 @@ export const shops = [
       {
         id: 'spirits-mixers',
         name: 'Standard Spirits & Mixers',
+        nameI18n: { en: 'Standard Spirits & Mixers', zhCN: '基酒与调酒饮料', zhTW: '基酒與調酒飲料', ko: '스탠다드 스피릿 & 믹서', ja: '定番スピリッツ＆ミキサー' },
         price: 'Approx. ¥500 – ¥700',
         img: 'menu2.jpg',
         description: {
@@ -608,6 +628,7 @@ export const shops = [
       {
         id: 'beers',
         name: 'Domestic & Imported Beers',
+        nameI18n: { en: 'Domestic & Imported Beers', zhCN: '国产与进口啤酒', zhTW: '國產與進口啤酒', ko: '국산 및 수입 맥주', ja: '国産・輸入ビール' },
         price: 'Approx. ¥600 – ¥800',
         img: 'menu3.jpg',
         description: {
@@ -625,6 +646,7 @@ export const shops = [
       {
         id: 'bar-snacks',
         name: 'Casual Bar Snacks',
+        nameI18n: { en: 'Casual Bar Snacks', zhCN: '休闲小食', zhTW: '休閒小食', ko: '캐주얼 안주', ja: 'カジュアルなおつまみ' },
         price: 'Approx. ¥400 – ¥600',
         img: 'menu4.jpg',
         description: {
@@ -651,6 +673,7 @@ export const shops = [
     category: 'Yakiniku',
     area: 'Near Shinchi Chinatown',
     areaJa: '新地中華街周辺',
+    areaI18n: { en: 'Near Shinchi Chinatown', zhCN: '新地中华街附近', zhTW: '新地中華街附近', ko: '신치 차이나타운 근처', ja: '新地中華街周辺' },
 
     // 現・仮マップ用の位置（%座標）※新地中華街寄り（中央）
     map: { x: 40, y: 58 },
@@ -708,6 +731,7 @@ export const shops = [
       {
         id: 'wagyu-assortment',
         name: 'Premium Nagasaki Wagyu Assortment',
+        nameI18n: { en: 'Premium Nagasaki Wagyu Assortment', zhCN: '长崎和牛顶级拼盘', zhTW: '長崎和牛頂級拼盤', ko: '나가사키 와규 프리미엄 모둠', ja: '長崎和牛プレミアム盛り合わせ' },
         price: 'Approx. ¥6,000 – ¥8,000 (ideal for 2–3 people)',
         img: 'menu1.jpg',
         description: {
@@ -734,6 +758,7 @@ export const shops = [
       {
         id: 'wagyu-sirloin-karubi',
         name: 'Thick-Cut Karubi',
+        nameI18n: { en: 'Thick-Cut Karubi', zhCN: '厚切五花烤肉', zhTW: '厚切五花烤肉', ko: '두껍게 썬 갈비', ja: '厚切りカルビ' },
         price: '¥3,190',
         img: 'menu2.jpg',
         description: {
@@ -758,6 +783,7 @@ export const shops = [
       {
         id: 'cold-noodles-bibimbap',
         name: 'Cold Noodles',
+        nameI18n: { en: 'Cold Noodles', zhCN: '冷面', zhTW: '冷麵', ko: '냉면', ja: '冷麺' },
         price: '¥1,078',
         img: 'menu3.jpg',
         description: {
@@ -783,6 +809,7 @@ export const shops = [
       {
         id: 'highball-beer',
         name: 'Nagasaki Local Sake',
+        nameI18n: { en: 'Nagasaki Local Sake', zhCN: '长崎地酒', zhTW: '長崎地酒', ko: '나가사키 지역 사케', ja: '長崎の地酒' },
         price: 'Approx. ¥800 – ¥1,200 per glass',
         img: 'menu4.jpg',
         description: {
@@ -816,6 +843,7 @@ export const shops = [
     category: 'Izakaya',
     area: 'Shianbashi',
     areaJa: '思案橋',
+    areaI18n: { en: 'Shianbashi', zhCN: '思案桥', zhTW: '思案橋', ko: '시안바시', ja: '思案橋' },
 
     // 現・仮マップ用の位置（%座標）※思案橋エリア
     map: { x: 66, y: 62 },
@@ -868,6 +896,7 @@ export const shops = [
       {
         id: 'seasonal-sashimi',
         name: 'Sashimi of seasonal fish',
+        nameI18n: { en: 'Sashimi of seasonal fish', zhCN: '时令鱼生鱼片', zhTW: '時令魚生魚片', ko: '제철 생선 사시미', ja: '旬魚の刺身' },
         price: '¥2,750',
         img: 'menu1.jpg',
         description: {
@@ -889,6 +918,7 @@ export const shops = [
       {
         id: 'whale-three-piece',
         name: 'Whale three-piece set',
+        nameI18n: { en: 'Whale three-piece set', zhCN: '鲸鱼三拼', zhTW: '鯨魚三拼', ko: '고래 3종 모둠', ja: '鯨三点盛り' },
         price: 'Approx. ¥2,400',
         img: 'menu2.jpg',
         description: {
@@ -906,6 +936,7 @@ export const shops = [
       {
         id: 'dutch-hot-pot',
         name: 'Specialty “Dutch hot pot”',
+        nameI18n: { en: 'Specialty “Dutch hot pot”', zhCN: '招牌荷兰锅', zhTW: '招牌荷蘭鍋', ko: '명물 네덜란드식 전골', ja: '名物「オランダ鍋」' },
         price: '¥2,200',
         img: 'menu3.jpg',
         description: {
@@ -933,6 +964,7 @@ export const shops = [
       {
         id: 'miso-oden',
         name: 'Specialty miso oden',
+        nameI18n: { en: 'Specialty miso oden', zhCN: '招牌味噌关东煮', zhTW: '招牌味噌關東煮', ko: '명물 미소 오뎅', ja: '名物みそおでん' },
         price: '¥990',
         img: 'menu4.jpg',
         description: {
@@ -969,6 +1001,7 @@ export const shops = [
     category: 'Bar',
     area: 'Shianbashi',
     areaJa: '思案橋',
+    areaI18n: { en: 'Shianbashi', zhCN: '思案桥', zhTW: '思案橋', ko: '시안바시', ja: '思案橋' },
 
     // 現・仮マップ用の位置（%座標）※思案橋（電停横）
     map: { x: 82, y: 40 },
@@ -1025,6 +1058,7 @@ export const shops = [
         id: 'tequila-horn',
         name: '"Ring the Horn for Tequila!" Shot',
         nameJa: '鳴らすと危険！ワンパフテキーラ',
+        nameI18n: { en: '"Ring the Horn for Tequila!" Shot', zhCN: '敲钟就请客！一口闷龙舌兰', zhTW: '敲鐘就請客！一口乾龍舌蘭', ko: '울리면 위험! 원샷 데킬라', ja: '鳴らすと危険！ワンパフテキーラ' },
         price: '¥700 per shot',
         img: 'menu1.jpg',
         description: {
@@ -1051,6 +1085,7 @@ export const shops = [
       {
         id: 'darts-games',
         name: 'Darts & Various Party Games',
+        nameI18n: { en: 'Darts & Various Party Games', zhCN: '飞镖与各种派对游戏', zhTW: '飛鏢與各種派對遊戲', ko: '다트 & 다양한 파티 게임', ja: 'ダーツ＆パーティーゲーム各種' },
         price: 'Darts from approx. ¥100 per game / Board games available',
         img: 'menu2.jpg',
         description: {
@@ -1077,6 +1112,7 @@ export const shops = [
         id: 'margherita-pizza',
         name: 'Margherita Pizza',
         nameJa: 'マルゲリータピザ',
+        nameI18n: { en: 'Margherita Pizza', zhCN: '玛格丽特披萨', zhTW: '瑪格麗特披薩', ko: '마르게리타 피자', ja: 'マルゲリータピザ' },
         price: '¥800',
         img: 'menu3.jpg',
         description: {
@@ -1103,6 +1139,7 @@ export const shops = [
         id: 'assorted-sausages',
         name: 'Assorted Sausages',
         nameJa: 'ソーセージの盛り合わせ',
+        nameI18n: { en: 'Assorted Sausages', zhCN: '香肠拼盘', zhTW: '香腸拼盤', ko: '소시지 모둠', ja: 'ソーセージの盛り合わせ' },
         price: '¥700',
         img: 'menu4.jpg',
         description: {
@@ -1129,6 +1166,7 @@ export const shops = [
     category: 'Izakaya',
     area: 'Near Shianbashi & Doza',
     areaJa: '思案橋・銅座周辺',
+    areaI18n: { en: 'Near Shianbashi & Doza', zhCN: '思案桥・铜座附近', zhTW: '思案橋・銅座附近', ko: '시안바시・도자 근처', ja: '思案橋・銅座周辺' },
 
     // 現・仮マップ用の位置（%座標）※思案橋・銅座エリア
     map: { x: 70, y: 90 },
@@ -1182,6 +1220,7 @@ export const shops = [
       {
         id: 'wagyu-tempura',
         name: 'Nagasaki Kuroge Wagyu Beef Tempura',
+        nameI18n: { en: 'Nagasaki Kuroge Wagyu Beef Tempura', zhCN: '长崎黑毛和牛天妇罗', zhTW: '長崎黑毛和牛天婦羅', ko: '나가사키 쿠로게 와규 튀김', ja: '長崎黒毛和牛の天ぷら' },
         price: '¥1,380',
         img: 'menu1.jpg',
         description: {
@@ -1207,6 +1246,7 @@ export const shops = [
       {
         id: 'shimaaji-shabu',
         name: 'Yukou Shima-Aji Shabu-Shabu with Goto Udon Finish',
+        nameI18n: { en: 'Yukou Shima-Aji Shabu-Shabu with Goto Udon Finish', zhCN: '柚香竹荚鱼涮锅（五岛乌冬收尾）', zhTW: '柚香竹莢魚涮鍋（五島烏龍麵收尾）', ko: '유자향 전갱이 샤부샤부 (고토 우동 마무리)', ja: '柚香しまあじしゃぶしゃぶ 五島うどん締め' },
         price: '¥2,500',
         img: 'menu2.jpg',
         description: {
@@ -1236,6 +1276,7 @@ export const shops = [
       {
         id: 'pork-lemon-butter',
         name: 'Pork Shoulder Roast Lemon Butter Steak on Hot Plate',
+        nameI18n: { en: 'Pork Shoulder Roast Lemon Butter Steak on Hot Plate', zhCN: '猪肩里脊柠檬黄油铁板牛排', zhTW: '豬肩里脊檸檬奶油鐵板牛排', ko: '돼지 어깨살 레몬버터 철판 스테이크', ja: '豚肩ロースのレモンバターステーキ 鉄板焼き' },
         price: '¥1,280',
         img: 'menu3.jpg',
         description: {
@@ -1296,6 +1337,7 @@ export const shops = [
     category: 'Chinese',
     area: 'Shinchi Chinatown',
     areaJa: '長崎市新地町',
+    areaI18n: { en: 'Shinchi Chinatown', zhCN: '新地中华街', zhTW: '新地中華街', ko: '신치 차이나타운', ja: '長崎市新地町' },
 
     map: { x: 44, y: 46 },
     geo: { lat: 32.741222, lng: 129.87587 },
@@ -1352,6 +1394,7 @@ export const shops = [
         id: 'tokujo-champon',
         name: 'Special Champon',
         nameJa: '特上ちゃんぽん',
+        nameI18n: { en: 'Special Champon', zhCN: '特上什锦面', zhTW: '特上什錦麵', ko: '특상 짬뽕', ja: '特上ちゃんぽん' },
         romaji: 'Tokujo champon',
         price: 'Approx. ¥2,000 – ¥2,200',
         img: 'menu1.jpg',
@@ -1379,6 +1422,7 @@ export const shops = [
         id: 'tokujo-sara-udon',
         name: 'Special Crispy Noodles',
         nameJa: '特上皿うどん',
+        nameI18n: { en: 'Special Crispy Noodles', zhCN: '特上炒乌冬脆面', zhTW: '特上炒烏龍脆麵', ko: '특상 사라우동', ja: '特上皿うどん' },
         romaji: 'Tokujo sara udon',
         price: 'Approx. ¥2,000 – ¥2,200',
         img: 'menu2.jpg',
@@ -1405,6 +1449,7 @@ export const shops = [
         id: 'dongpo-rou',
         name: 'Braised Pork Belly',
         nameJa: '東坡肉',
+        nameI18n: { en: 'Braised Pork Belly', zhCN: '东坡肉', zhTW: '東坡肉', ko: '동파육', ja: '東坡肉' },
         romaji: 'Tonporo',
         price: 'Approx. ¥800 – ¥1,200 per portion',
         img: 'menu3.jpg',
@@ -1429,6 +1474,7 @@ export const shops = [
         id: 'fukahire-soup',
         name: 'Shark Fin Soup',
         nameJa: 'フカヒレスープ',
+        nameI18n: { en: 'Shark Fin Soup', zhCN: '鱼翅汤', zhTW: '魚翅湯', ko: '샥스핀 수프', ja: 'フカヒレスープ' },
         romaji: 'Fukahire soup',
         price: 'Approx. ¥1,800 – ¥2,500',
         img: 'menu4.jpg',
@@ -1463,6 +1509,7 @@ export const shops = [
     category: 'Chinese',
     area: 'Shinchi Chinatown',
     areaJa: '長崎市新地町',
+    areaI18n: { en: 'Shinchi Chinatown', zhCN: '新地中华街', zhTW: '新地中華街', ko: '신치 차이나타운', ja: '長崎市新地町' },
 
     map: { x: 42, y: 48 },
     geo: { lat: 32.741982, lng: 129.875717 },
@@ -1519,6 +1566,7 @@ export const shops = [
         id: 'nagasaki-champon',
         name: 'Nagasaki Champon',
         nameJa: '長崎ちゃんぽん',
+        nameI18n: { en: 'Nagasaki Champon', zhCN: '长崎什锦面', zhTW: '長崎什錦麵', ko: '나가사키 짬뽕', ja: '長崎ちゃんぽん' },
         romaji: 'Nagasaki champon',
         price: '¥1,200',
         img: 'menu1.jpg',
@@ -1545,6 +1593,7 @@ export const shops = [
         id: 'chili-crab',
         name: 'Deep-Fried Crab in Chili Sauce',
         nameJa: 'カニのチリソース',
+        nameI18n: { en: 'Deep-Fried Crab in Chili Sauce', zhCN: '辣椒蟹', zhTW: '辣椒蟹', ko: '칠리 크랩', ja: 'カニのチリソース' },
         romaji: 'Kani no chili sauce',
         price: '¥1,700',
         img: 'menu2.jpg',
@@ -1571,6 +1620,7 @@ export const shops = [
         id: 'yurinchi',
         name: 'Crispy Chicken with Sweet Soy Sauce',
         nameJa: '油淋鶏',
+        nameI18n: { en: 'Crispy Chicken with Sweet Soy Sauce', zhCN: '油淋鸡', zhTW: '油淋雞', ko: '유린기', ja: '油淋鶏' },
         romaji: 'Yurinchi',
         price: '¥1,600',
         img: 'menu3.jpg',
@@ -1597,6 +1647,7 @@ export const shops = [
         id: 'mapo-tofu',
         name: 'Mapo Tofu',
         nameJa: '麻婆豆腐',
+        nameI18n: { en: 'Mapo Tofu', zhCN: '麻婆豆腐', zhTW: '麻婆豆腐', ko: '마파두부', ja: '麻婆豆腐' },
         romaji: 'Mabo dofu',
         price: '¥1,000',
         img: 'menu4.jpg',
@@ -1631,6 +1682,7 @@ export const shops = [
     category: 'Chinese',
     area: 'Shinchi Chinatown',
     areaJa: '長崎市新地町',
+    areaI18n: { en: 'Shinchi Chinatown', zhCN: '新地中华街', zhTW: '新地中華街', ko: '신치 차이나타운', ja: '長崎市新地町' },
 
     map: { x: 40, y: 47 },
     geo: { lat: 32.741905, lng: 129.875595 },
@@ -1687,6 +1739,7 @@ export const shops = [
         id: 'nagasaki-champon',
         name: 'Nagasaki Champon',
         nameJa: '長崎ちゃんぽん',
+        nameI18n: { en: 'Nagasaki Champon', zhCN: '长崎什锦面', zhTW: '長崎什錦麵', ko: '나가사키 짬뽕', ja: '長崎ちゃんぽん' },
         romaji: 'Nagasaki champon',
         price: '¥1,200',
         img: 'menu1.jpg',
@@ -1716,6 +1769,7 @@ export const shops = [
         id: 'kourou-fan',
         name: 'Braised Pork Belly Rice Bowl',
         nameJa: '角煮飯',
+        nameI18n: { en: 'Braised Pork Belly Rice Bowl', zhCN: '红烧猪肉盖饭', zhTW: '紅燒豬肉蓋飯', ko: '가쿠니 덮밥', ja: '角煮飯' },
         romaji: 'Kakuni meshi',
         price: 'Approx. ¥1,200',
         img: 'menu2.jpg',
@@ -1742,6 +1796,7 @@ export const shops = [
         id: 'suanlatang',
         name: 'Hot and Sour Soup',
         nameJa: '酸辣湯',
+        nameI18n: { en: 'Hot and Sour Soup', zhCN: '酸辣汤', zhTW: '酸辣湯', ko: '쏸라탕', ja: '酸辣湯' },
         romaji: 'Sanratan',
         price: 'Approx. ¥1,100',
         img: 'menu3.jpg',
@@ -1768,6 +1823,7 @@ export const shops = [
         id: 'shumai',
         name: 'Steamed Pork Dumplings',
         nameJa: 'シュウマイ',
+        nameI18n: { en: 'Steamed Pork Dumplings', zhCN: '烧卖', zhTW: '燒賣', ko: '슈마이', ja: 'シュウマイ' },
         romaji: 'Shumai',
         price: 'Approx. ¥800 per portion',
         img: 'menu4.jpg',
@@ -1803,6 +1859,7 @@ export const shops = [
     category: 'Chinese',
     area: 'Shinchi Chinatown',
     areaJa: '長崎市新地町',
+    areaI18n: { en: 'Shinchi Chinatown', zhCN: '新地中华街', zhTW: '新地中華街', ko: '신치 차이나타운', ja: '長崎市新地町' },
 
     map: { x: 41, y: 50 },
     geo: { lat: 32.74094, lng: 129.875504 },
@@ -1854,6 +1911,7 @@ export const shops = [
         id: 'laolee-set',
         name: 'Lao Lee Set Menu',
         nameJa: '老李セット',
+        nameI18n: { en: 'Lao Lee Set Menu', zhCN: '老李套餐', zhTW: '老李套餐', ko: '라오리 세트', ja: '老李セット' },
         romaji: 'Lao Lee set',
         price: '¥1,650',
         img: 'menu1.jpg',
@@ -1880,6 +1938,7 @@ export const shops = [
         id: 'karasumi-champon',
         name: 'Dried Mullet Roe Champon',
         nameJa: 'からすみちゃんぽん',
+        nameI18n: { en: 'Dried Mullet Roe Champon', zhCN: '乌鱼子什锦面', zhTW: '烏魚子什錦麵', ko: '숭어알 짬뽕', ja: 'からすみちゃんぽん' },
         romaji: 'Karasumi champon',
         price: '¥1,540',
         img: 'menu2.jpg',
@@ -1908,6 +1967,7 @@ export const shops = [
         id: 'juicy-gyoza',
         name: 'Original Nagasaki Juicy Boiled Dumplings',
         nameJa: '元祖長崎肉汁水餃子',
+        nameI18n: { en: 'Original Nagasaki Juicy Boiled Dumplings', zhCN: '元祖长崎多汁水饺', zhTW: '元祖長崎多汁水餃', ko: '원조 나가사키 육즙 물만두', ja: '元祖長崎肉汁水餃子' },
         romaji: 'Ganso Nagasaki nikujiru sui-gyoza',
         price: '¥430',
         img: 'menu3.jpg',
@@ -1931,6 +1991,7 @@ export const shops = [
         id: 'taiwanese-mazesoba',
         name: 'Taiwanese Mazesoba',
         nameJa: '台湾まぜそば',
+        nameI18n: { en: 'Taiwanese Mazesoba', zhCN: '台湾拌面', zhTW: '台灣拌麵', ko: '타이완 마제소바', ja: '台湾まぜそば' },
         romaji: 'Taiwan mazesoba',
         price: '¥1,160',
         img: 'menu4.jpg',
@@ -1965,6 +2026,7 @@ export const shops = [
     category: 'Chinese',
     area: 'Shinchi Chinatown',
     areaJa: '長崎市新地町',
+    areaI18n: { en: 'Shinchi Chinatown', zhCN: '新地中华街', zhTW: '新地中華街', ko: '신치 차이나타운', ja: '長崎市新地町' },
 
     map: { x: 39, y: 49 },
     geo: { lat: 32.742134, lng: 129.874985 },
@@ -2016,6 +2078,7 @@ export const shops = [
         id: 'nagasaki-champon',
         name: 'Nagasaki Champon',
         nameJa: '長崎ちゃんぽん',
+        nameI18n: { en: 'Nagasaki Champon', zhCN: '长崎什锦面', zhTW: '長崎什錦麵', ko: '나가사키 짬뽕', ja: '長崎ちゃんぽん' },
         romaji: 'Nagasaki champon',
         price: '¥800',
         img: 'menu1.jpg',
@@ -2045,6 +2108,7 @@ export const shops = [
         id: 'soboro-sara-udon',
         name: 'Soboro Sara Udon (Thick Noodles)',
         nameJa: 'そぼろ皿うどん（太麺）',
+        nameI18n: { en: 'Soboro Sara Udon (Thick Noodles)', zhCN: '肉末皿乌冬粗面', zhTW: '肉末皿烏龍粗麵', ko: '소보로 사라우동 (굵은 면)', ja: 'そぼろ皿うどん（太麺）' },
         romaji: 'Soboro sara udon',
         price: '¥1,150',
         img: 'menu2.jpg',
@@ -2071,6 +2135,7 @@ export const shops = [
         id: 'sweet-sour-pork',
         name: 'Sweet and Sour Pork',
         nameJa: '酢豚',
+        nameI18n: { en: 'Sweet and Sour Pork', zhCN: '糖醋肉', zhTW: '糖醋肉', ko: '탕수육', ja: '酢豚' },
         romaji: 'Subuta',
         price: '¥1,260',
         img: 'menu3.jpg',
@@ -2097,6 +2162,7 @@ export const shops = [
         id: 'chinjao-rosu',
         name: 'Stir-Fried Beef and Green Peppers',
         nameJa: '牛肉とピーマンの炒め（青椒肉絲）',
+        nameI18n: { en: 'Stir-Fried Beef and Green Peppers', zhCN: '青椒肉丝', zhTW: '青椒肉絲', ko: '피망 소고기 볶음', ja: '牛肉とピーマンの炒め（青椒肉絲）' },
         romaji: 'Chinjao rosu',
         price: 'Small ¥1,890 / Large ¥2,840',
         img: 'menu4.jpg',
