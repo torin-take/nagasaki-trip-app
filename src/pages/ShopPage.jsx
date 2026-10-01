@@ -91,6 +91,28 @@ export default function ShopPage() {
         {/* 住所（日本語のまま。タクシーや店員に見せて使えるようにするため翻訳しない） */}
         {shop.address && <p className="mt-4 text-sm text-ink/70">{shop.address}</p>}
 
+        {/* 道順（Googleマップ／Appleマップをそれぞれ別アプリ・タブで開く） */}
+        {shop.geo?.lat != null && (
+          <div className="mt-3 flex flex-wrap gap-2">
+            <a
+              href={`https://www.google.com/maps/dir/?api=1&destination=${shop.geo.lat},${shop.geo.lng}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="press inline-flex items-center gap-1.5 rounded-full bg-navy px-4 py-2 text-sm font-semibold text-white shadow-hand"
+            >
+              <span aria-hidden="true">📍</span> Google マップで道順
+            </a>
+            <a
+              href={`https://maps.apple.com/?daddr=${shop.geo.lat},${shop.geo.lng}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="press inline-flex items-center gap-1.5 rounded-full border border-navy/15 bg-white px-4 py-2 text-sm font-semibold text-navy shadow-hand"
+            >
+              <span aria-hidden="true">📍</span> Apple マップで道順
+            </a>
+          </div>
+        )}
+
         {/* 営業時間（ボタンを押すと日〜土の一覧が開く） */}
         <OpeningHours hours={shop.hours} />
       </section>
