@@ -192,7 +192,7 @@ export default function MapView({
             id: 'walk-rings-line',
             type: 'line',
             source: 'walk-rings',
-            paint: { 'line-color': '#d67f48', 'line-width': 1.5, 'line-opacity': 0.55, 'line-dasharray': [2, 2] },
+            paint: { 'line-color': '#e0453e', 'line-width': 2.5, 'line-opacity': 0.9, 'line-dasharray': [2, 2] },
           })
 
           WALK_BANDS.forEach((min) => {
