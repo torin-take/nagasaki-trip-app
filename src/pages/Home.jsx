@@ -56,7 +56,12 @@ export default function Home() {
       {/* ヘッダー */}
       <div className="relative z-10 px-[22px] pt-[54px]">
         <div className="flex items-center justify-between">
-          <span className="text-[13px] font-semibold text-white/70">{t('place', lang)}</span>
+          <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-gold">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C7.8 2 4.4 5.4 4.4 9.6c0 5.6 6.4 11.6 7.1 12.3a.7.7 0 0 0 1 0c.7-.7 7.1-6.7 7.1-12.3C19.6 5.4 16.2 2 12 2zm0 10.4a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6z" />
+            </svg>
+            {t('place', lang)}
+          </span>
           <button
             type="button"
             onClick={cycleLang}
