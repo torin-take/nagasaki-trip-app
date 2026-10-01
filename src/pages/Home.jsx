@@ -65,7 +65,6 @@ export default function Home() {
             {LANG_CODE[lang]} ⇄
           </button>
         </div>
-        <h1 className="mt-2 font-heading text-[28px] leading-[1.12] text-white">{t('title', lang)}</h1>
       </div>
 
       {/* カテゴリーチップ */}
