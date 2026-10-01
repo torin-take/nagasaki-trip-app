@@ -4,6 +4,7 @@ import MapView from '../components/MapView.jsx'
 import ShopImage from '../components/ShopImage.jsx'
 import InstallPrompt from '../components/InstallPrompt.jsx'
 import NightView from '../components/NightView.jsx'
+import { FeedbackIcon } from '../components/icons/NagasakiIcons.jsx'
 import { LANGUAGES, useLanguage } from '../LanguageContext.jsx'
 import { shops, shopImageUrl } from '../data/shops.js'
 import { useFavorites, toggleFavorite } from '../favorites.js'
@@ -123,7 +124,7 @@ export default function Home() {
       </div>
 
       {/* タブバー */}
-      <div className="fixed bottom-[22px] left-1/2 z-20 flex h-16 w-[calc(100%-32px)] max-w-[358px] -translate-x-1/2 items-center gap-1 rounded-full bg-text p-1.5 shadow-organic-lg">
+      <div className="fixed bottom-[22px] left-1/2 z-20 flex h-16 w-[calc(100%-32px)] max-w-[420px] -translate-x-1/2 items-center gap-1 rounded-full bg-text p-1.5 shadow-organic-lg">
         <TabButton active={view === 'map'} onClick={() => setView('map')}>
           {t('tabMap', lang)}
         </TabButton>
@@ -132,6 +133,9 @@ export default function Home() {
         </TabButton>
         <TabButton active={view === 'saved'} onClick={() => setView('saved')} badge={favorites.length}>
           {t('tabSaved', lang)}
+        </TabButton>
+        <TabButton onClick={() => navigate('/survey')} icon={<FeedbackIcon size={16} />}>
+          {t('tabFeedback', lang)}
         </TabButton>
       </div>
 
@@ -157,7 +161,7 @@ function CategoryChip({ active, label, dot, onClick }) {
   )
 }
 
-function TabButton({ active, onClick, badge, children }) {
+function TabButton({ active, onClick, badge, icon, children }) {
   return (
     <button
       type="button"
@@ -166,6 +170,7 @@ function TabButton({ active, onClick, badge, children }) {
         active ? 'bg-bg font-bold text-text' : 'font-semibold text-neutral-400'
       }`}
     >
+      {icon}
       {children}
       {!!badge && (
         <span className="flex h-[22px] min-w-[22px] items-center justify-center rounded-full bg-accent px-1 text-xs font-bold text-neutral-100">
