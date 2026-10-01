@@ -1,15 +1,15 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import MapView from '../components/MapView.jsx'
 import ShopImage from '../components/ShopImage.jsx'
 import InstallPrompt from '../components/InstallPrompt.jsx'
+import NightView from '../components/NightView.jsx'
 import { LANGUAGES, useLanguage } from '../LanguageContext.jsx'
 import { shops, shopImageUrl } from '../data/shops.js'
 import { useFavorites, toggleFavorite } from '../favorites.js'
 import { HOTEL, walkMinutes, WALK_BANDS } from '../walkRings.js'
 import { getOpenStatus } from '../walkRings.js'
 import { t, CATEGORY_KEYS, CATEGORY_LABEL, CATEGORY_COLOR, FAVORITES_FILTER } from '../walkRingsText.js'
-import { hasWelcomed } from '../welcomeState.js'
 
 // ホーム画面＝「02 Map」「03 List」「06 Saved」の3タブをまとめたシェル。
 // 絞り込み（カテゴリー・お気に入り）と選択中の店舗は、3タブ全体で共有する。
@@ -20,11 +20,6 @@ export default function Home() {
   const [view, setView] = useState('map') // 'map' | 'list' | 'saved'
   const [category, setCategory] = useState(null) // null=すべて／FAVORITES_FILTER／カテゴリー名
   const [selectedId, setSelectedId] = useState(null)
-
-  // 初回だけ言語選択画面へ送る
-  useEffect(() => {
-    if (!hasWelcomed()) navigate('/welcome', { replace: true })
-  }, [navigate])
 
   const shopsWithWalk = useMemo(
     () =>
@@ -52,24 +47,28 @@ export default function Home() {
   const openShop = (id) => navigate(`/shop/${id}`)
 
   return (
-    <main className="relative flex h-dvh flex-col overflow-hidden bg-bg font-body text-text">
+    <main className="relative flex h-dvh flex-col overflow-hidden bg-night font-body text-white">
+      {/* 背景：長崎の夜景（フルブリード、今まで通り） */}
+      <NightView className="absolute inset-0 h-full w-full" />
+      <div className="absolute inset-0 bg-gradient-to-b from-night/35 via-night/30 to-night/95" />
+
       {/* ヘッダー */}
-      <div className="px-[22px] pt-[54px]">
+      <div className="relative z-10 px-[22px] pt-[54px]">
         <div className="flex items-center justify-between">
-          <span className="text-[13px] font-semibold text-neutral-700">{t('place', lang)}</span>
+          <span className="text-[13px] font-semibold text-white/70">{t('place', lang)}</span>
           <button
             type="button"
             onClick={cycleLang}
-            className="press flex h-[34px] items-center rounded-full bg-neutral-200 px-3 text-[13px] font-bold text-text hover:bg-neutral-300"
+            className="press flex h-[34px] items-center rounded-full bg-white/15 px-3 text-[13px] font-bold text-white hover:bg-white/25"
           >
             {LANG_CODE[lang]} ⇄
           </button>
         </div>
-        <h1 className="mt-2 font-heading text-[28px] leading-[1.12] text-text">{t('title', lang)}</h1>
+        <h1 className="mt-2 font-heading text-[28px] leading-[1.12] text-white">{t('title', lang)}</h1>
       </div>
 
       {/* カテゴリーチップ */}
-      <div className="mt-3 flex gap-1.5 overflow-x-auto px-[22px] pb-1" style={{ scrollbarWidth: 'none' }}>
+      <div className="relative z-10 mt-3 flex gap-1.5 overflow-x-auto px-[22px] pb-1" style={{ scrollbarWidth: 'none' }}>
         <CategoryChip
           active={category === null}
           label={t('all', lang)}
@@ -87,7 +86,7 @@ export default function Home() {
       </div>
 
       {/* メインコンテンツ（タブで切り替え） */}
-      <div className="relative mt-2 flex-1 overflow-hidden px-3 pb-[96px]">
+      <div className="relative z-10 mt-2 flex-1 overflow-hidden px-3 pb-[96px]">
         <div className={view === 'map' ? 'flex h-full flex-col' : 'hidden'}>
           <MapView
             className="min-h-0 flex-1"
@@ -227,12 +226,12 @@ function ListView({ shops: list, lang, favorites, onOpen }) {
 
   return (
     <div className="h-full overflow-y-auto pb-6">
-      {grouped.length === 0 && <p className="px-2 py-6 text-sm font-medium text-neutral-700">{t('none', lang)}</p>}
+      {grouped.length === 0 && <p className="px-2 py-6 text-sm font-medium text-white/70">{t('none', lang)}</p>}
       {grouped.map((band) => (
         <div key={band.label}>
           <div className="flex items-center gap-2 px-2 pb-1 pt-3">
             <span className="h-3.5 w-3.5 rounded-full border-[3px] border-accent-400 box-border" />
-            <span className="text-[13px] font-bold text-accent-700">{band.label}</span>
+            <span className="text-[13px] font-bold text-accent-300">{band.label}</span>
           </div>
           {band.items.map((s) => (
             <ShopRow key={s.id} shop={s} lang={lang} saved={favorites.includes(s.id)} onOpen={() => onOpen(s.id)} />
@@ -246,7 +245,7 @@ function ListView({ shops: list, lang, favorites, onOpen }) {
 function ShopRow({ shop, lang, saved, onOpen }) {
   const ring = CATEGORY_COLOR[shop.category] || '#c67139'
   return (
-    <div className="flex items-center gap-3 px-2 py-1.5">
+    <div className="mb-2 flex items-center gap-3 rounded-radius-lg bg-neutral-100 p-2 shadow-organic-sm">
       <button type="button" onClick={onOpen} className="flex min-w-0 flex-1 items-center gap-3 text-left">
         <div className="h-[60px] w-[60px] flex-none rounded-full" style={{ boxShadow: `0 0 0 3px ${ring}` }}>
           <ShopImage
@@ -287,9 +286,9 @@ function SavedView({ shops: list, lang, onOpen }) {
   return (
     <div className="h-full overflow-y-auto pb-6">
       <div className="px-2 pb-2 pt-1">
-        <h2 className="font-heading text-[28px] leading-[1.12] text-text">{t('savedTitle', lang)}</h2>
+        <h2 className="font-heading text-[28px] leading-[1.12] text-white">{t('savedTitle', lang)}</h2>
         {sorted.length > 0 && (
-          <p className="mt-1 text-[13.5px] font-semibold text-accent-700">
+          <p className="mt-1 text-[13.5px] font-semibold text-accent-300">
             {t('savedSum', lang)(sorted.length, Math.max(...sorted.map((s) => s.walk)))}
           </p>
         )}
@@ -325,7 +324,7 @@ function SavedView({ shops: list, lang, onOpen }) {
             </button>
           </div>
         ))}
-        {sorted.length === 0 && <p className="px-1 text-sm font-medium text-neutral-700">{t('empty', lang)}</p>}
+        {sorted.length === 0 && <p className="px-1 text-sm font-medium text-white/70">{t('empty', lang)}</p>}
       </div>
     </div>
   )
