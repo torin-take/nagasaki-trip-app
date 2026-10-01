@@ -90,7 +90,7 @@ export default function Home() {
       <div className="relative z-10 mt-2 flex-1 overflow-hidden px-3 pb-[96px]">
         <div className={view === 'map' ? 'flex h-full flex-col' : 'hidden'}>
           <MapView
-            className="min-h-0 flex-1"
+            className="m-3 min-h-0 flex-1"
             selectedId={selectedId}
             onSelect={(shop) => setSelectedId(shop.id)}
             categoryFilter={category}
