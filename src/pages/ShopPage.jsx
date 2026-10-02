@@ -153,6 +153,18 @@ export default function ShopPage() {
         )}
         {/* メニュー・価格は時期によって変わる旨 */}
         <MenuNote className="mb-3" />
+        {/* メニュー表（店頭の品書き写真） */}
+        {shop.menuBoardImage && (
+          <div className="mb-3 overflow-hidden rounded-2xl border border-black/5 bg-white shadow-hand">
+            <ShopImage
+              src={shopImageUrl(shop, shop.menuBoardImage)}
+              variant="menu"
+              label={tt('menu', lang)}
+              alt={tt('menu', lang)}
+              className="aspect-[4/3] w-full"
+            />
+          </div>
+        )}
         <div className="grid grid-cols-2 gap-3">
           {shop.menu.map((m, i) => {
             const mName = m.nameI18n?.[lang] || m.name
