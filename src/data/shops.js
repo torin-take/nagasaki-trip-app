@@ -2719,9 +2719,8 @@ export const shops = [
     name: "Dashi Bonz",
     nameJa: "だしぼんず",
     nameI18n: { en: "Dashi Bonz", zhCN: "Dashi Bonz", zhTW: "Dashi Bonz", ko: "다시본즈", ja: "だしぼんず" },
-    heroDish: { name: { en: "Goto Udon", zhCN: "五岛乌冬", zhTW: "五島烏龍麵", ko: "고토 우동", ja: "五島うどん" }, image: 'exterior.jpg' },
+    heroDish: { name: { en: "Nagasaki Sea Bream Dashi Udon", zhCN: "长崎鲷鱼高汤乌冬", zhTW: "長崎鯛魚高湯烏龍", ko: "나가사키 도미 육수 우동", ja: "長崎鯛だしうどん" }, price: "¥935", image: 'exterior.jpg' },
     category: "Izakaya",
-    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
     area: "Near Shianbashi",
     areaJa: "思案橋周辺",
     areaI18n: { en: "Near Shianbashi", zhCN: "思案桥附近", zhTW: "思案橋附近", ko: "시안바시 근처", ja: "思案橋周辺" },
@@ -2751,11 +2750,28 @@ export const shops = [
 
     menu: [
       {
-        id: "goto-udon",
-        name: "Goto Udon",
-        nameJa: "五島うどん",
-        nameI18n: { en: "Goto Udon", zhCN: "五岛乌冬", zhTW: "五島烏龍麵", ko: "고토 우동", ja: "五島うどん" },
+        id: "tai-dashi-udon",
+        name: "Nagasaki Sea Bream Dashi Udon",
+        nameJa: "長崎鯛だしうどん",
+        nameI18n: { en: "Nagasaki Sea Bream Dashi Udon", zhCN: "长崎鲷鱼高汤乌冬", zhTW: "長崎鯛魚高湯烏龍", ko: "나가사키 도미 육수 우동", ja: "長崎鯛だしうどん" },
+        price: "¥935",
         img: "menu1.jpg",
+      },
+      {
+        id: "niku-gobo-tempura-udon",
+        name: "Beef & Burdock Tempura Udon",
+        nameJa: "肉ごぼう天うどん",
+        nameI18n: { en: "Beef & Burdock Tempura Udon", zhCN: "牛肉牛蒡天妇罗乌冬", zhTW: "牛肉牛蒡天婦羅烏龍", ko: "소고기 우엉 튀김 우동", ja: "肉ごぼう天うどん" },
+        price: "¥880",
+        img: "menu2.jpg",
+      },
+      {
+        id: "tenzaru-udon",
+        name: "Cold Udon with Tempura (Tenzaru)",
+        nameJa: "天ざるうどん",
+        nameI18n: { en: "Cold Udon with Tempura (Tenzaru)", zhCN: "天妇罗冷乌冬", zhTW: "天婦羅冷烏龍", ko: "덴자루 우동 (튀김 곁들인 냉우동)", ja: "天ざるうどん" },
+        price: "¥935",
+        img: "menu3.jpg",
       },
     ],
   },
