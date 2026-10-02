@@ -2780,9 +2780,8 @@ export const shops = [
     name: "Sushi Kozo",
     nameJa: "鮨 幸三",
     nameI18n: { en: "Sushi Kozo", zhCN: "寿司 幸三", zhTW: "壽司 幸三", ko: "스시 코조", ja: "鮨 幸三" },
-    heroDish: { name: { en: "Chef's Omakase Sushi", zhCN: "主厨精选寿司", zhTW: "主廚精選壽司", ko: "오마카세 스시", ja: "おまかせ寿司" }, image: 'exterior.jpg' },
+    heroDish: { name: { en: "Chef's Omakase Sushi", zhCN: "主厨精选寿司", zhTW: "主廚精選壽司", ko: "오마카세 스시", ja: "おまかせにぎり" }, price: "¥4,000", image: 'exterior.jpg' },
     category: "Sushi",
-    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
     area: "Dōza-machi, Nagasaki",
     areaJa: "長崎市銅座町",
     areaI18n: { en: "Dōza-machi, Nagasaki", zhCN: "长崎铜座町", zhTW: "長崎銅座町", ko: "나가사키 도자마치", ja: "長崎市銅座町" },
@@ -2801,6 +2800,7 @@ export const shops = [
 
     photoBase: "/shops/sushi-kozo",
     exterior: 'exterior.jpg',
+    menuBoardImage: 'menu-board.jpg',
 
     description: {
       en: "A counter sushi restaurant in Doza offering chef's-choice courses built around the day's catch — a special-occasion choice for fresh Nagasaki seafood.",
@@ -2813,9 +2813,10 @@ export const shops = [
     menu: [
       {
         id: "omakase",
-        name: "Chef's Omakase Sushi",
-        nameJa: "おまかせ寿司",
-        nameI18n: { en: "Chef's Omakase Sushi", zhCN: "主厨精选寿司", zhTW: "主廚精選壽司", ko: "오마카세 스시", ja: "おまかせ寿司" },
+        name: "Chef's Omakase Nigiri",
+        nameJa: "おまかせにぎり",
+        nameI18n: { en: "Chef's Omakase Nigiri", zhCN: "主厨精选握寿司", zhTW: "主廚精選握壽司", ko: "오마카세 니기리", ja: "おまかせにぎり" },
+        price: "¥4,000",
         img: "menu1.jpg",
       },
     ],
