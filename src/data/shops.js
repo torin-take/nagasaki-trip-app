@@ -2826,9 +2826,8 @@ export const shops = [
     name: "Koda Shokudo",
     nameJa: "甲田食堂",
     nameI18n: { en: "Koda Shokudo", zhCN: "甲田食堂", zhTW: "甲田食堂", ko: "코다 쇼쿠도", ja: "甲田食堂" },
-    heroDish: { name: { en: "Today's Fresh Fish Set Meal", zhCN: "今日鲜鱼定食", zhTW: "今日鮮魚定食", ko: "오늘의 생선 정식", ja: "本日の鮮魚定食" }, image: 'exterior.jpg' },
+    heroDish: { name: { en: "Salmon & Salmon Roe Rice Bowl", zhCN: "三文鱼鱼子盖饭", zhTW: "鮭魚魚卵蓋飯", ko: "연어 이쿠라 덮밥", ja: "サーモンいくら丼" }, image: 'exterior.jpg' },
     category: "Japanese",
-    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
     area: "Dōza-machi, Nagasaki",
     areaJa: "長崎市銅座町",
     areaI18n: { en: "Dōza-machi, Nagasaki", zhCN: "长崎铜座町", zhTW: "長崎銅座町", ko: "나가사키 도자마치", ja: "長崎市銅座町" },
@@ -2858,11 +2857,25 @@ export const shops = [
 
     menu: [
       {
-        id: "fish-teishoku",
-        name: "Today's Fresh Fish Set Meal",
-        nameJa: "本日の鮮魚定食",
-        nameI18n: { en: "Today's Fresh Fish Set Meal", zhCN: "今日鲜鱼定食", zhTW: "今日鮮魚定食", ko: "오늘의 생선 정식", ja: "本日の鮮魚定食" },
+        id: "salmon-ikura-don",
+        name: "Salmon & Salmon Roe Rice Bowl",
+        nameJa: "サーモンいくら丼",
+        nameI18n: { en: "Salmon & Salmon Roe Rice Bowl", zhCN: "三文鱼鱼子盖饭", zhTW: "鮭魚魚卵蓋飯", ko: "연어 이쿠라 덮밥", ja: "サーモンいくら丼" },
         img: "menu1.jpg",
+      },
+      {
+        id: "nagasaki-kaisen-don-set",
+        name: "Nagasaki Seafood Rice Bowl Set",
+        nameJa: "長崎海鮮丼セット",
+        nameI18n: { en: "Nagasaki Seafood Rice Bowl Set", zhCN: "长崎海鲜盖饭套餐", zhTW: "長崎海鮮蓋飯套餐", ko: "나가사키 해산물 덮밥 세트", ja: "長崎海鮮丼セット" },
+        img: "menu2.jpg",
+      },
+      {
+        id: "sashimi-moriawase",
+        name: "Assorted Sashimi",
+        nameJa: "刺身の盛り合わせ",
+        nameI18n: { en: "Assorted Sashimi", zhCN: "生鱼片拼盘", zhTW: "生魚片拼盤", ko: "모둠 사시미", ja: "刺身の盛り合わせ" },
+        img: "menu3.jpg",
       },
     ],
   },
