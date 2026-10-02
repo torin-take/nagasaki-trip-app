@@ -5,6 +5,7 @@ import ShopImage from '../components/ShopImage.jsx'
 import InstallPrompt from '../components/InstallPrompt.jsx'
 import NightView from '../components/NightView.jsx'
 import { FeedbackIcon } from '../components/icons/NagasakiIcons.jsx'
+import SurveyForm from '../components/SurveyForm.jsx'
 import { LANGUAGES, useLanguage } from '../LanguageContext.jsx'
 import { shops, shopImageUrl } from '../data/shops.js'
 import { useFavorites, toggleFavorite } from '../favorites.js'
@@ -18,7 +19,7 @@ export default function Home() {
   const navigate = useNavigate()
   const { lang, setLang } = useLanguage()
   const favorites = useFavorites()
-  const [view, setView] = useState('map') // 'map' | 'list' | 'saved'
+  const [view, setView] = useState('map') // 'map' | 'list' | 'saved' | 'feedback'
   const [category, setCategory] = useState(null) // null=すべて／FAVORITES_FILTER／カテゴリー名
   const [selectedId, setSelectedId] = useState(null)
 
@@ -132,6 +133,17 @@ export default function Home() {
             onOpen={openShop}
           />
         )}
+
+        {view === 'feedback' && (
+          <div className="h-full overflow-y-auto pb-6">
+            <div className="px-2 pb-3 pt-1">
+              <h2 className="font-heading text-[28px] leading-[1.12] text-white">{t('tabFeedback', lang)}</h2>
+            </div>
+            <div className="px-2">
+              <SurveyForm />
+            </div>
+          </div>
+        )}
       </div>
 
       {/* タブバー */}
@@ -145,7 +157,7 @@ export default function Home() {
         <TabButton active={view === 'saved'} onClick={() => setView('saved')} badge={favorites.length}>
           {t('tabSaved', lang)}
         </TabButton>
-        <TabButton onClick={() => navigate('/survey')} icon={<FeedbackIcon size={16} />}>
+        <TabButton active={view === 'feedback'} onClick={() => setView('feedback')} icon={<FeedbackIcon size={16} />}>
           {t('tabFeedback', lang)}
         </TabButton>
       </div>
