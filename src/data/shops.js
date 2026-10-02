@@ -2544,9 +2544,8 @@ export const shops = [
     name: "Kadoya",
     nameJa: "かどや",
     nameI18n: { en: "Kadoya", zhCN: "角屋", zhTW: "角屋", ko: "카도야", ja: "かどや" },
-    heroDish: { name: { en: "Rich Tonkotsu Ramen", zhCN: "浓厚豚骨拉面", zhTW: "濃厚豚骨拉麵", ko: "진한 돈코츠 라멘", ja: "濃厚豚骨ラーメン" }, image: 'exterior.jpg' },
+    heroDish: { name: { en: "Kadoya Ramen", zhCN: "角屋拉面", zhTW: "角屋拉麵", ko: "카도야 라멘", ja: "かどやラーメン" }, image: 'exterior.jpg' },
     category: "Ramen",
-    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
     area: "Shianbashi",
     areaJa: "思案橋",
     areaI18n: { en: "Shianbashi", zhCN: "思案桥", zhTW: "思案橋", ko: "시안바시", ja: "思案橋" },
@@ -2576,11 +2575,32 @@ export const shops = [
 
     menu: [
       {
-        id: "tonkotsu-ramen",
-        name: "Rich Tonkotsu Ramen",
-        nameJa: "濃厚豚骨ラーメン",
-        nameI18n: { en: "Rich Tonkotsu Ramen", zhCN: "浓厚豚骨拉面", zhTW: "濃厚豚骨拉麵", ko: "진한 돈코츠 라멘", ja: "濃厚豚骨ラーメン" },
+        id: "kadoya-ramen",
+        name: "Kadoya Ramen",
+        nameJa: "かどやラーメン",
+        nameI18n: { en: "Kadoya Ramen", zhCN: "角屋拉面", zhTW: "角屋拉麵", ko: "카도야 라멘", ja: "かどやラーメン" },
         img: "menu1.jpg",
+      },
+      {
+        id: "aka-ramen",
+        name: "Aka (Red) Spicy Ramen",
+        nameJa: "赤ラーメン",
+        nameI18n: { en: "Aka (Red) Spicy Ramen", zhCN: "红辣拉面", zhTW: "紅辣拉麵", ko: "아카 라멘 (매운맛)", ja: "赤ラーメン" },
+        img: "menu2.jpg",
+      },
+      {
+        id: "koku-miso-champon",
+        name: "Rich Miso Champon",
+        nameJa: "コク味噌ちゃんぽん",
+        nameI18n: { en: "Rich Miso Champon", zhCN: "浓郁味噌什锦面", zhTW: "濃郁味噌什錦麵", ko: "코쿠 미소 짬뽕", ja: "コク味噌ちゃんぽん" },
+        img: "menu3.jpg",
+      },
+      {
+        id: "kadoya-meat-ramen",
+        name: "Kadoya Special Meat Ramen",
+        nameJa: "かどや特製肉ラーメン",
+        nameI18n: { en: "Kadoya Special Meat Ramen", zhCN: "角屋特制叉烧拉面", zhTW: "角屋特製叉燒拉麵", ko: "카도야 특제 고기 라멘", ja: "かどや特製肉ラーメン" },
+        img: "menu4.jpg",
       },
     ],
   },
