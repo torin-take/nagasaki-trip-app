@@ -2217,7 +2217,6 @@ export const shops = [
     nameI18n: { en: "Shianbashi Ramen", zhCN: "思案桥拉面", zhTW: "思案橋拉麵", ko: "시안바시 라멘", ja: "思案橋ラーメン" },
     heroDish: { name: { en: "Bakudan Ramen", zhCN: "爆弹拉面", zhTW: "爆彈拉麵", ko: "바쿠단 라멘", ja: "バクダンラーメン" }, image: 'exterior.jpg' },
     category: "Ramen",
-    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
     area: "Shianbashi",
     areaJa: "思案橋",
     areaI18n: { en: "Shianbashi", zhCN: "思案桥", zhTW: "思案橋", ko: "시안바시", ja: "思案橋" },
@@ -2225,13 +2224,13 @@ export const shops = [
     geo: { lat: 32.743095, lng: 129.87915 },
     address: "〒850-0853 長崎県長崎市浜町6-17",
     hours: {
-      sun: ["11:30–04:00"],
-      mon: ["11:30–04:00"],
-      tue: ["11:30–04:00"],
-      wed: ["11:30–04:00"],
-      thu: ["11:30–04:00"],
-      fri: ["11:30–04:00"],
-      sat: ["11:30–04:00"],
+      sun: ["11:00–15:00", "17:00–01:30"],
+      mon: ["11:00–15:00", "17:00–01:30"],
+      tue: ["11:00–15:00", "17:00–01:30"],
+      wed: ["11:00–15:00", "17:00–01:30"],
+      thu: null,
+      fri: ["11:00–15:00", "17:00–01:30"],
+      sat: ["11:00–15:00", "17:00–01:30"],
     },
 
     photoBase: "/shops/shianbashi-ramen",
@@ -2239,11 +2238,11 @@ export const shops = [
     menuBoardImage: 'menu-board.jpg',
 
     description: {
-      en: "A Shianbashi late-night institution open into the early morning. Best known for its fiery \"Bakudan\" (bomb) spicy champon and ramen, plus oden — a popular final stop after a night out.",
-      ja: "思案橋で深夜まで営業する人気店。名物は激辛の「バクダンチャンポン」「バクダンラーメン」で、おでんも人気。飲んだ後の〆としても親しまれています。",
-      zhCN: "思案桥的深夜人气店，营业至凌晨。招牌是超辣的「爆弹什锦面」「爆弹拉面」，关东煮也很受欢迎，是夜饮后常去的收尾之选。",
-      zhTW: "思案橋的深夜人氣店，營業至凌晨。招牌是超辣的「爆彈什錦麵」「爆彈拉麵」，關東煮也很受歡迎，是夜飲後常去的收尾之選。",
-      ko: "시안바시에서 새벽까지 영업하는 심야 맛집. 매운맛으로 유명한 \"바쿠단 짬뽕\"과 \"바쿠단 라멘\"이 대표 메뉴이며, 오뎅도 인기입니다.",
+      en: "A Shianbashi ramen shop open for lunch and late into the night (closed Thursdays). Best known for its fiery \"Bakudan\" (bomb) spicy champon and ramen, plus oden — a popular final stop after a night out.",
+      ja: "思案橋のラーメン店。昼と夜の二部営業で、深夜1時半まで営業（木曜定休）。名物は激辛の「バクダンチャンポン」「バクダンラーメン」で、おでんも人気。飲んだ後の〆としても親しまれています。",
+      zhCN: "思案桥的拉面店，午市与夜市分开营业，最晚至凌晨1点半（周四休息）。招牌是超辣的「爆弹什锦面」「爆弹拉面」，关东煮也很受欢迎，是夜饮后常去的收尾之选。",
+      zhTW: "思案橋的拉麵店，午市與夜市分開營業，最晚至凌晨1點半（週四公休）。招牌是超辣的「爆彈什錦麵」「爆彈拉麵」，關東煮也很受歡迎，是夜飲後常去的收尾之選。",
+      ko: "시안바시의 라멘 가게로, 점심과 저녁으로 나뉘어 영업하며 새벽 1시 반까지 운영합니다 (목요일 휴무). 매운맛으로 유명한 \"바쿠단 짬뽕\"과 \"바쿠단 라멘\"이 대표 메뉴이며, 오뎅도 인기입니다.",
     },
 
     menu: [
