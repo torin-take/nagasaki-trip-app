@@ -9,7 +9,7 @@ import SurveyForm from '../components/SurveyForm.jsx'
 import { LANGUAGES, useLanguage } from '../LanguageContext.jsx'
 import { shops, shopImageUrl } from '../data/shops.js'
 import { useFavorites, toggleFavorite } from '../favorites.js'
-import { HOTEL, walkMinutes, WALK_BANDS } from '../walkRings.js'
+import { HOTEL, walkMinutes } from '../walkRings.js'
 import { getOpenStatus } from '../walkRings.js'
 import { t, CATEGORY_KEYS, CATEGORY_LABEL, CATEGORY_COLOR, FAVORITES_FILTER } from '../walkRingsText.js'
 
@@ -244,24 +244,23 @@ function SelectedCard({ shop, lang, onOpen }) {
 }
 
 function ListView({ shops: list, lang, favorites, onOpen }) {
-  const bands = WALK_BANDS.concat(999)
-  const grouped = bands
-    .map((max, i) => {
-      const min = i === 0 ? 0 : bands[i - 1]
-      return { label: t('bands', lang)[i], items: list.filter((s) => s.walk > min && s.walk <= max) }
-    })
-    .filter((b) => b.items.length)
+  const grouped = CATEGORY_KEYS.map((cat) => ({
+    key: cat,
+    label: CATEGORY_LABEL[cat]?.[lang] || cat,
+    color: CATEGORY_COLOR[cat],
+    items: list.filter((s) => s.category === cat).sort((a, b) => a.walk - b.walk),
+  })).filter((g) => g.items.length)
 
   return (
     <div className="h-full overflow-y-auto pb-6">
       {grouped.length === 0 && <p className="px-2 py-6 text-sm font-medium text-white/70">{t('none', lang)}</p>}
-      {grouped.map((band) => (
-        <div key={band.label}>
+      {grouped.map((group) => (
+        <div key={group.key}>
           <div className="flex items-center gap-2 px-2 pb-1 pt-3">
-            <span className="h-3.5 w-3.5 rounded-full border-[3px] border-accent-400 box-border" />
-            <span className="text-[13px] font-bold text-accent-300">{band.label}</span>
+            <span className="h-3.5 w-3.5 rounded-full border-[3px] box-border" style={{ borderColor: group.color }} />
+            <span className="text-[13px] font-bold text-accent-300">{group.label}</span>
           </div>
-          {band.items.map((s) => (
+          {group.items.map((s) => (
             <ShopRow key={s.id} shop={s} lang={lang} saved={favorites.includes(s.id)} onOpen={() => onOpen(s.id)} />
           ))}
         </div>
