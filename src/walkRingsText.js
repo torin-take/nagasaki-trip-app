@@ -90,7 +90,7 @@ export function t(key, lang) {
   return dict[key] ?? T.en[key]
 }
 
-export const CATEGORY_KEYS = ['Chinese', 'Izakaya', 'Yakiniku', 'Bar', 'Cafe']
+export const CATEGORY_KEYS = ['Chinese', 'Izakaya', 'Yakiniku', 'Bar', 'Cafe', 'Ramen', 'Sushi', 'Japanese']
 
 export const CATEGORY_LABEL = {
   Chinese: { en: 'Chinese', zhCN: '中餐', zhTW: '中餐', ko: '중식', ja: '中華' },
@@ -98,6 +98,9 @@ export const CATEGORY_LABEL = {
   Yakiniku: { en: 'Yakiniku', zhCN: '烤肉', zhTW: '燒肉', ko: '야키니쿠', ja: '焼肉' },
   Bar: { en: 'Bar', zhCN: '酒吧', zhTW: '酒吧', ko: '바', ja: 'バー' },
   Cafe: { en: 'Café', zhCN: '咖啡', zhTW: '咖啡', ko: '카페', ja: 'カフェ' },
+  Ramen: { en: 'Ramen', zhCN: '拉面', zhTW: '拉麵', ko: '라멘', ja: 'ラーメン' },
+  Sushi: { en: 'Sushi', zhCN: '寿司', zhTW: '壽司', ko: '스시', ja: '寿司' },
+  Japanese: { en: 'Japanese', zhCN: '日式料理', zhTW: '日式料理', ko: '일식', ja: '和食' },
 }
 
 export const CATEGORY_COLOR = {
@@ -106,6 +109,9 @@ export const CATEGORY_COLOR = {
   Yakiniku: '#b2622d',
   Bar: '#aebf92',
   Cafe: '#a19786',
+  Ramen: '#9c4a7a',
+  Sushi: '#3b6e8f',
+  Japanese: '#8a7a4e',
 }
 
 export const FAVORITES_FILTER = '__favorites__'

@@ -18,6 +18,7 @@ import { CATEGORY_COLOR, FAVORITES_FILTER } from '../walkRingsText.js'
 // 「地図そのもの」と、選択/絞り込みの状態をpropsで受け取って反映するところまでを担当する。
 
 const DEFAULT_COLOR = '#c67139'
+const UNVERIFIED_COLOR = '#2563eb'
 
 // OpenStreetMapの地名データにある言語別フィールド(name:xx)を、優先順位つきで参照する。
 const NAME_FIELD_CHAINS = {
@@ -216,7 +217,8 @@ export default function MapView({
         shops.forEach((shop) => {
           if (shop.geo?.lat == null || shop.geo?.lng == null) return
 
-          const ring = CATEGORY_COLOR[shop.category] || DEFAULT_COLOR
+          // 新規追加・未確認の店舗は、確認しやすいようカテゴリー色ではなく青で表示する
+          const ring = shop.unverified ? UNVERIFIED_COLOR : CATEGORY_COLOR[shop.category] || DEFAULT_COLOR
           const el = document.createElement('button')
           el.type = 'button'
           el.setAttribute('aria-label', `${shop.name} (${shop.category})`)

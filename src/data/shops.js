@@ -2188,6 +2188,567 @@ export const shops = [
       },
     ],
   },
+  {
+    id: "shianbashi-ramen",
+    name: "Shianbashi Ramen",
+    nameJa: "思案橋ラーメン",
+    nameI18n: { en: "Shianbashi Ramen", zhCN: "思案桥拉面", zhTW: "思案橋拉麵", ko: "시안바시 라멘", ja: "思案橋ラーメン" },
+    heroDish: { name: { en: "Baku-kara Spicy Ramen", zhCN: "爆辣拉面", zhTW: "爆辣拉麵", ko: "바쿠카라 매운 라멘", ja: "バク辛ラーメン" }, image: 'exterior.jpg' },
+    category: "Ramen",
+    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
+    area: "Shianbashi",
+    areaJa: "思案橋",
+    areaI18n: { en: "Shianbashi", zhCN: "思案桥", zhTW: "思案橋", ko: "시안바시", ja: "思案橋" },
+
+    geo: { lat: 32.743095, lng: 129.87915 },
+    address: "〒850-0853 長崎県長崎市浜町6-17",
+    hours: {
+      sun: ["11:30–04:00"],
+      mon: ["11:30–04:00"],
+      tue: ["11:30–04:00"],
+      wed: ["11:30–04:00"],
+      thu: ["11:30–04:00"],
+      fri: ["11:30–04:00"],
+      sat: ["11:30–04:00"],
+    },
+
+    photoBase: "/shops/shianbashi-ramen",
+    exterior: 'exterior.jpg',
+
+    description: {
+      en: "A Shianbashi late-night institution open into the early morning. Best known for its fiery \"Baku-kara\" spicy ramen, plus gyoza and oden — a popular final stop after a night out.",
+      ja: "思案橋で深夜まで営業する人気店。名物は激辛の「バク辛ラーメン」で、餃子やおでんも人気。飲んだ後の〆としても親しまれています。",
+      zhCN: "思案桥的深夜人气店，营业至凌晨。招牌是超辣的「爆辣拉面」，饺子和关东煮也很受欢迎，是夜饮后常去的收尾之选。",
+      zhTW: "思案橋的深夜人氣店，營業至凌晨。招牌是超辣的「爆辣拉麵」，餃子和關東煮也很受歡迎，是夜飲後常去的收尾之選。",
+      ko: "시안바시에서 새벽까지 영업하는 심야 맛집. 매운맛으로 유명한 \"바쿠카라 라멘\"이 대표 메뉴이며, 교자와 오뎅도 인기입니다.",
+    },
+
+    menu: [
+      {
+        id: "baku-kara",
+        name: "Baku-kara Spicy Ramen",
+        nameJa: "バク辛ラーメン",
+        nameI18n: { en: "Baku-kara Spicy Ramen", zhCN: "爆辣拉面", zhTW: "爆辣拉麵", ko: "바쿠카라 매운 라멘", ja: "バク辛ラーメン" },
+        img: "menu1.jpg",
+      },
+      {
+        id: "gyoza",
+        name: "Pan-Fried Gyoza",
+        nameJa: "餃子",
+        nameI18n: { en: "Pan-Fried Gyoza", zhCN: "煎饺", zhTW: "煎餃", ko: "군만두", ja: "餃子" },
+        img: "menu2.jpg",
+      },
+    ],
+  },
+  {
+    id: "tsuruchan",
+    name: "Tsuruchan",
+    nameJa: "ツル茶ん",
+    nameI18n: { en: "Tsuruchan", zhCN: "鹤茶", zhTW: "鶴茶", ko: "츠루짱", ja: "ツル茶ん" },
+    heroDish: { name: { en: "Turkish Rice", zhCN: "土耳其饭", zhTW: "土耳其飯", ko: "터키라이스", ja: "トルコライス" }, image: 'exterior.jpg' },
+    category: "Cafe",
+    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
+    area: "Near Shianbashi",
+    areaJa: "思案橋周辺",
+    areaI18n: { en: "Near Shianbashi", zhCN: "思案桥附近", zhTW: "思案橋附近", ko: "시안바시 근처", ja: "思案橋周辺" },
+
+    geo: { lat: 32.743137, lng: 129.880661 },
+    address: "〒850-0832 長崎県長崎市油屋町2-47",
+    hours: {
+      sun: ["09:00–21:00"],
+      mon: ["09:00–21:00"],
+      tue: ["09:00–21:00"],
+      wed: ["09:00–21:00"],
+      thu: ["09:00–21:00"],
+      fri: ["09:00–21:00"],
+      sat: ["09:00–21:00"],
+    },
+
+    photoBase: "/shops/tsuruchan",
+    exterior: 'exterior.jpg',
+
+    description: {
+      en: "Kyushu's oldest kissaten (Japanese-style cafe), open since 1925. Famous for Nagasaki's beloved \"Turkish Rice\" (pilaf, spaghetti and a pork cutlet on one plate) and the original Nagasaki-style milk seiki.",
+      ja: "大正14年（1925年）創業、九州最古の喫茶店。ピラフ・スパゲティ・カツを一皿にのせた長崎名物「トルコライス」と、元祖「ミルクセーキ」で知られています。",
+      zhCN: "创业于1925年，九州最古老的咖啡馆。以长崎名物「土耳其饭」（炒饭、意面与炸猪排同盘）和元祖奶昔而闻名。",
+      zhTW: "創業於1925年，九州最古老的咖啡館。以長崎名物「土耳其飯」（炒飯、義麵與炸豬排同盤）和元祖奶昔而聞名。",
+      ko: "1925년 창업한 규슈에서 가장 오래된 다방. 필라프·스파게티·돈가스를 한 접시에 담은 나가사키 명물 \"터키라이스\"와 원조 밀크셰이크로 유명합니다.",
+    },
+
+    menu: [
+      {
+        id: "turkish-rice",
+        name: "Turkish Rice",
+        nameJa: "トルコライス",
+        nameI18n: { en: "Turkish Rice", zhCN: "土耳其饭", zhTW: "土耳其飯", ko: "터키라이스", ja: "トルコライス" },
+        img: "menu1.jpg",
+      },
+      {
+        id: "milk-seiki",
+        name: "Original Milk Seiki",
+        nameJa: "元祖ミルクセーキ",
+        nameI18n: { en: "Original Milk Seiki", zhCN: "元祖奶昔", zhTW: "元祖奶昔", ko: "원조 밀크셰이크", ja: "元祖ミルクセーキ" },
+        img: "menu2.jpg",
+      },
+    ],
+  },
+  {
+    id: "shippoku-hamakatsu",
+    name: "Nagasaki Shippoku Hamakatsu",
+    nameJa: "長崎卓袱浜勝",
+    nameI18n: { en: "Nagasaki Shippoku Hamakatsu", zhCN: "长崎卓袱滨胜", zhTW: "長崎卓袱濱勝", ko: "나가사키 싯포쿠 하마카츠", ja: "長崎卓袱浜勝" },
+    heroDish: { name: { en: "Shippoku Course", zhCN: "卓袱料理套餐", zhTW: "卓袱料理套餐", ko: "싯포쿠 코스", ja: "卓袱料理コース" }, image: 'exterior.jpg' },
+    category: "Japanese",
+    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
+    area: "Near Shianbashi & Doza",
+    areaJa: "思案橋・銅座周辺",
+    areaI18n: { en: "Near Shianbashi & Doza", zhCN: "思案桥・铜座附近", zhTW: "思案橋・銅座附近", ko: "시안바시・도자 근처", ja: "思案橋・銅座周辺" },
+
+    geo: { lat: 32.743282, lng: 129.881302 },
+    address: "〒850-0831 長崎県長崎市鍛冶屋町6-50",
+    hours: {
+      sun: ["11:00–15:00", "17:00–21:30"],
+      mon: ["11:00–15:00", "17:00–21:30"],
+      tue: ["11:00–15:00", "17:00–21:30"],
+      wed: ["11:00–15:00", "17:00–21:30"],
+      thu: ["11:00–15:00", "17:00–21:30"],
+      fri: ["11:00–15:00", "17:00–21:30"],
+      sat: ["11:00–15:00", "17:00–21:30"],
+    },
+
+    photoBase: "/shops/shippoku-hamakatsu",
+    exterior: 'exterior.jpg',
+
+    description: {
+      en: "A specialist in Shippoku, Nagasaki's historic banquet-style cuisine blending Japanese, Chinese and Western dishes on one round table. A good way to sample a wide range of Nagasaki flavors in a single course.",
+      ja: "和華蘭（和・中・洋）の料理が一つの卓を囲む、長崎の郷土料理「卓袱料理」の専門店。一度のコースで長崎の様々な味を楽しめます。",
+      zhCN: "长崎传统宴席料理「卓袱料理」专门店，和、中、洋式菜肴同桌共享。可在一套料理中品尝长崎的多种风味。",
+      zhTW: "長崎傳統宴席料理「卓袱料理」專門店，和、中、洋式菜餚同桌共享。可在一套料理中品嚐長崎的多種風味。",
+      ko: "일본·중국·서양 요리가 한 상에 오르는 나가사키 전통 연회 요리 싯포쿠 요리 전문점. 한 번의 코스로 나가사키의 다양한 맛을 즐길 수 있습니다.",
+    },
+
+    menu: [
+      {
+        id: "shippoku-course",
+        name: "Shippoku Course",
+        nameJa: "卓袱料理コース",
+        nameI18n: { en: "Shippoku Course", zhCN: "卓袱料理套餐", zhTW: "卓袱料理套餐", ko: "싯포쿠 코스", ja: "卓袱料理コース" },
+        img: "menu1.jpg",
+      },
+    ],
+  },
+  {
+    id: "yossou",
+    name: "Yossou",
+    nameJa: "吉宗",
+    nameI18n: { en: "Yossou", zhCN: "吉宗", zhTW: "吉宗", ko: "요소", ja: "吉宗" },
+    heroDish: { name: { en: "Steamed Egg Custard (Chawanmushi)", zhCN: "茶碗蒸", zhTW: "茶碗蒸", ko: "자완무시(달걀찜)", ja: "茶碗蒸し" }, image: 'exterior.jpg' },
+    category: "Japanese",
+    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
+    area: "Near Shianbashi",
+    areaJa: "思案橋周辺",
+    areaI18n: { en: "Near Shianbashi", zhCN: "思案桥附近", zhTW: "思案橋附近", ko: "시안바시 근처", ja: "思案橋周辺" },
+
+    geo: { lat: 32.744514, lng: 129.878799 },
+    address: "〒850-0853 長崎県長崎市浜町8-9",
+    hours: {
+      sun: ["11:00–21:00"],
+      mon: ["11:00–21:00"],
+      tue: ["11:00–21:00"],
+      wed: ["11:00–21:00"],
+      thu: ["11:00–21:00"],
+      fri: ["11:00–21:00"],
+      sat: ["11:00–21:00"],
+    },
+
+    photoBase: "/shops/yossou",
+    exterior: 'exterior.jpg',
+
+    description: {
+      en: "Founded in 1866, the original specialist in Nagasaki's giant chawanmushi (steamed egg custard) and mushizushi (steamed sushi), a local classic rich with seafood and mountain vegetables.",
+      ja: "慶応2年（1866年）創業、元祖・茶碗蒸し専門店。具だくさんの大きな茶碗蒸しと蒸し寿司が名物の老舗です。",
+      zhCN: "创业于1866年，元祖茶碗蒸专门店。料多味美的大份茶碗蒸与蒸寿司是招牌名物。",
+      zhTW: "創業於1866年，元祖茶碗蒸專門店。料多味美的大份茶碗蒸與蒸壽司是招牌名物。",
+      ko: "1866년 창업한 원조 자완무시(달걀찜) 전문점. 건더기가 가득한 큼직한 자완무시와 찜스시가 명물인 노포입니다.",
+    },
+
+    menu: [
+      {
+        id: "chawanmushi",
+        name: "Steamed Egg Custard (Chawanmushi)",
+        nameJa: "茶碗蒸し",
+        nameI18n: { en: "Steamed Egg Custard (Chawanmushi)", zhCN: "茶碗蒸", zhTW: "茶碗蒸", ko: "자완무시(달걀찜)", ja: "茶碗蒸し" },
+        img: "menu1.jpg",
+      },
+      {
+        id: "mushizushi",
+        name: "Steamed Sushi (Mushizushi)",
+        nameJa: "蒸し寿司",
+        nameI18n: { en: "Steamed Sushi (Mushizushi)", zhCN: "蒸寿司", zhTW: "蒸壽司", ko: "무시즈시(찜스시)", ja: "蒸し寿司" },
+        img: "menu2.jpg",
+      },
+    ],
+  },
+  {
+    id: "osakaya-hamamachi",
+    name: "Osakaya Hamamachi",
+    nameJa: "大阪屋 浜町店",
+    nameI18n: { en: "Osakaya Hamamachi", zhCN: "大阪屋 滨町店", zhTW: "大阪屋 濱町店", ko: "오사카야 하마마치점", ja: "大阪屋 浜町店" },
+    heroDish: { name: { en: "Assorted Yakiniku Set", zhCN: "烤肉拼盘", zhTW: "烤肉拼盤", ko: "모둠 야키니쿠", ja: "焼肉盛り合わせ" }, image: 'exterior.jpg' },
+    category: "Yakiniku",
+    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
+    area: "Shianbashi",
+    areaJa: "思案橋",
+    areaI18n: { en: "Shianbashi", zhCN: "思案桥", zhTW: "思案橋", ko: "시안바시", ja: "思案橋" },
+
+    geo: { lat: 32.743576, lng: 129.880524 },
+    address: "〒850-0853 長崎県長崎市浜町11-11",
+    hours: {
+      sun: ["17:00–24:00"],
+      mon: ["17:00–24:00"],
+      tue: ["17:00–24:00"],
+      wed: ["17:00–24:00"],
+      thu: ["17:00–24:00"],
+      fri: ["17:00–24:00"],
+      sat: ["17:00–24:00"],
+    },
+
+    photoBase: "/shops/osakaya-hamamachi",
+    exterior: 'exterior.jpg',
+
+    description: {
+      en: "A yakiniku restaurant just off the Shianbashi arcade, serving a range of grilled beef cuts late into the night — a solid choice for a casual grilled-meat dinner near the hotel.",
+      ja: "思案橋のアーケードそばにある焼肉店。様々な部位の焼肉を夜遅くまで楽しめます。",
+      zhCN: "位于思案桥拱廊附近的烤肉店，提供多种牛肉部位，营业至深夜，是酒店附近轻松吃烤肉的好选择。",
+      zhTW: "位於思案橋拱廊附近的烤肉店，提供多種牛肉部位，營業至深夜，是飯店附近輕鬆吃烤肉的好選擇。",
+      ko: "시안바시 아케이드 근처의 야키니쿠 식당으로, 다양한 부위의 고기를 밤늦게까지 즐길 수 있습니다.",
+    },
+
+    menu: [
+      {
+        id: "yakiniku-set",
+        name: "Assorted Yakiniku Set",
+        nameJa: "焼肉盛り合わせ",
+        nameI18n: { en: "Assorted Yakiniku Set", zhCN: "烤肉拼盘", zhTW: "烤肉拼盤", ko: "모둠 야키니쿠", ja: "焼肉盛り合わせ" },
+        img: "menu1.jpg",
+      },
+    ],
+  },
+  {
+    id: "kadoya",
+    name: "Kadoya",
+    nameJa: "かどや",
+    nameI18n: { en: "Kadoya", zhCN: "角屋", zhTW: "角屋", ko: "카도야", ja: "かどや" },
+    heroDish: { name: { en: "Rich Tonkotsu Ramen", zhCN: "浓厚豚骨拉面", zhTW: "濃厚豚骨拉麵", ko: "진한 돈코츠 라멘", ja: "濃厚豚骨ラーメン" }, image: 'exterior.jpg' },
+    category: "Ramen",
+    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
+    area: "Shianbashi",
+    areaJa: "思案橋",
+    areaI18n: { en: "Shianbashi", zhCN: "思案桥", zhTW: "思案橋", ko: "시안바시", ja: "思案橋" },
+
+    geo: { lat: 32.743225, lng: 129.87854 },
+    address: "〒850-0853 長崎県長崎市浜町6-23",
+    hours: {
+      sun: ["11:00–01:00"],
+      mon: ["11:00–03:00"],
+      tue: ["11:00–03:00"],
+      wed: ["11:00–03:00"],
+      thu: ["11:00–03:00"],
+      fri: ["11:00–03:00"],
+      sat: ["11:00–03:00"],
+    },
+
+    photoBase: "/shops/kadoya",
+    exterior: 'exterior.jpg',
+
+    description: {
+      en: "A ramen shop near Kankodori known for its deeply rich tonkotsu broth, open very late — a favorite stop after a night out in the area.",
+      ja: "観光通り近くのラーメン店。濃厚な豚骨スープが評判で、深夜まで営業しているため飲んだ後に立ち寄る人も多い人気店です。",
+      zhCN: "位于观光通附近的拉面店，以浓厚的豚骨汤底闻名，营业至深夜，是夜饮后的热门去处。",
+      zhTW: "位於觀光通附近的拉麵店，以濃厚的豚骨湯底聞名，營業至深夜，是夜飲後的熱門去處。",
+      ko: "간코도리 근처의 라멘 가게로, 진한 돈코츠 육수로 유명하며 밤늦게까지 영업해 술자리 후 들르기 좋은 곳입니다.",
+    },
+
+    menu: [
+      {
+        id: "tonkotsu-ramen",
+        name: "Rich Tonkotsu Ramen",
+        nameJa: "濃厚豚骨ラーメン",
+        nameI18n: { en: "Rich Tonkotsu Ramen", zhCN: "浓厚豚骨拉面", zhTW: "濃厚豚骨拉麵", ko: "진한 돈코츠 라멘", ja: "濃厚豚骨ラーメン" },
+        img: "menu1.jpg",
+      },
+    ],
+  },
+  {
+    id: "kaniya-doza",
+    name: "Kaniya",
+    nameJa: "かにや",
+    nameI18n: { en: "Kaniya", zhCN: "蟹屋", zhTW: "蟹屋", ko: "카니야", ja: "かにや" },
+    heroDish: { name: { en: "Assorted Onigiri Set", zhCN: "饭团拼盘", zhTW: "飯糰拼盤", ko: "모둠 오니기리", ja: "おにぎり盛り合わせ" }, image: 'exterior.jpg' },
+    category: "Japanese",
+    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
+    area: "Dōza-machi, Nagasaki",
+    areaJa: "長崎市銅座町",
+    areaI18n: { en: "Dōza-machi, Nagasaki", zhCN: "长崎铜座町", zhTW: "長崎銅座町", ko: "나가사키 도자마치", ja: "長崎市銅座町" },
+
+    geo: { lat: 32.742653, lng: 129.877487 },
+    address: "〒850-0841 長崎県長崎市銅座町10-2",
+    hours: {
+      sun: null,
+      mon: ["18:00–02:00"],
+      tue: ["18:00–02:00"],
+      wed: ["18:00–02:00"],
+      thu: ["18:00–02:00"],
+      fri: ["18:00–03:00"],
+      sat: ["18:00–03:00"],
+    },
+
+    photoBase: "/shops/kaniya-doza",
+    exterior: 'exterior.jpg',
+
+    description: {
+      en: "An onigiri (rice ball) specialty shop since 1965, a Nagasaki institution for ending a night out with a hand-shaped rice ball instead of ramen — the local answer to a late-night snack.",
+      ja: "昭和40年創業のおにぎり専門店。長崎では飲んだ後の〆にラーメンではなくおにぎりを食べる文化があり、その代表格として親しまれています。",
+      zhCN: "创业于1965年的饭团专门店。长崎有夜饮后以饭团代替拉面收尾的文化，本店正是其代表。",
+      zhTW: "創業於1965年的飯糰專門店。長崎有夜飲後以飯糰代替拉麵收尾的文化，本店正是其代表。",
+      ko: "1965년 창업한 오니기리(주먹밥) 전문점. 나가사키에는 술자리 마무리로 라멘 대신 오니기리를 먹는 문화가 있는데, 그 대표 격인 가게입니다.",
+    },
+
+    menu: [
+      {
+        id: "onigiri-set",
+        name: "Assorted Onigiri Set",
+        nameJa: "おにぎり盛り合わせ",
+        nameI18n: { en: "Assorted Onigiri Set", zhCN: "饭团拼盘", zhTW: "飯糰拼盤", ko: "모둠 오니기리", ja: "おにぎり盛り合わせ" },
+        img: "menu1.jpg",
+      },
+    ],
+  },
+  {
+    id: "yakitori-ren",
+    name: "Yakitori Ren",
+    nameJa: "焼鳥 蓮",
+    nameI18n: { en: "Yakitori Ren", zhCN: "烤鸡肉串 莲", zhTW: "烤雞肉串 蓮", ko: "야키토리 렌", ja: "焼鳥 蓮" },
+    heroDish: { name: { en: "Assorted Yakitori Skewers", zhCN: "烤鸡肉串拼盘", zhTW: "烤雞肉串拼盤", ko: "모둠 야키토리", ja: "焼き鳥盛り合わせ" }, image: 'exterior.jpg' },
+    category: "Izakaya",
+    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
+    area: "Dōza-machi, Nagasaki",
+    areaJa: "長崎市銅座町",
+    areaI18n: { en: "Dōza-machi, Nagasaki", zhCN: "长崎铜座町", zhTW: "長崎銅座町", ko: "나가사키 도자마치", ja: "長崎市銅座町" },
+
+    geo: { lat: 32.743298, lng: 129.87764 },
+    address: "〒850-0841 長崎県長崎市銅座町6-8 HANA銅座ビル1F",
+    hours: {
+      sun: ["18:00–22:00"],
+      mon: ["18:00–22:00"],
+      tue: ["18:00–22:00"],
+      wed: ["18:00–22:00"],
+      thu: ["18:00–22:00"],
+      fri: ["18:00–22:00"],
+      sat: ["18:00–22:00"],
+    },
+
+    photoBase: "/shops/yakitori-ren",
+    exterior: 'exterior.jpg',
+
+    description: {
+      en: "A charcoal-grilled yakitori restaurant in Doza, serving skewers alongside izakaya-style small plates — a cozy evening spot near the hotel.",
+      ja: "銅座にある炭火焼鳥の店。焼き鳥を中心に、居酒屋メニューも楽しめる夜の一軒です。",
+      zhCN: "位于铜座的炭火烤鸡肉串店，以烤串为主，也提供居酒屋风味小菜，是酒店附近惬意的夜间去处。",
+      zhTW: "位於銅座的炭火烤雞肉串店，以烤串為主，也提供居酒屋風味小菜，是飯店附近愜意的夜間去處。",
+      ko: "도자에 있는 숯불 야키토리 가게로, 꼬치구이를 중심으로 이자카야풍 안주도 즐길 수 있는 아늑한 저녁 식당입니다.",
+    },
+
+    menu: [
+      {
+        id: "yakitori-set",
+        name: "Assorted Yakitori Skewers",
+        nameJa: "焼き鳥盛り合わせ",
+        nameI18n: { en: "Assorted Yakitori Skewers", zhCN: "烤鸡肉串拼盘", zhTW: "烤雞肉串拼盤", ko: "모둠 야키토리", ja: "焼き鳥盛り合わせ" },
+        img: "menu1.jpg",
+      },
+    ],
+  },
+  {
+    id: "hiiragi-ramen",
+    name: "Ramen Hiiragi",
+    nameJa: "らーめん柊",
+    nameI18n: { en: "Ramen Hiiragi", zhCN: "柊拉面", zhTW: "柊拉麵", ko: "라멘 히이라기", ja: "らーめん柊" },
+    heroDish: { name: { en: "Tonkotsu Ramen", zhCN: "豚骨拉面", zhTW: "豚骨拉麵", ko: "돈코츠 라멘", ja: "豚骨ラーメン" }, image: 'exterior.jpg' },
+    category: "Ramen",
+    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
+    area: "Dōza-machi, Nagasaki",
+    areaJa: "長崎市銅座町",
+    areaI18n: { en: "Dōza-machi, Nagasaki", zhCN: "长崎铜座町", zhTW: "長崎銅座町", ko: "나가사키 도자마치", ja: "長崎市銅座町" },
+
+    geo: { lat: 32.743206, lng: 129.877563 },
+    address: "〒850-0841 長崎県長崎市銅座町6-9",
+    hours: {
+      sun: ["11:00–03:00"],
+      mon: ["11:00–03:00"],
+      tue: null,
+      wed: ["11:00–03:00"],
+      thu: ["11:00–03:00"],
+      fri: ["11:00–05:00"],
+      sat: ["11:00–05:00"],
+    },
+
+    photoBase: "/shops/hiiragi-ramen",
+    exterior: 'exterior.jpg',
+
+    description: {
+      en: "A classic tonkotsu ramen shop in Doza, open into the small hours on weekends — a reliable late-night bowl of noodles near the hotel.",
+      ja: "銅座にある豚骨ラーメンの店。週末は深夜まで営業しており、〆の一杯に便利な一軒です。",
+      zhCN: "位于铜座的豚骨拉面店，周末营业至深夜，是收尾一碗面的便利选择。",
+      zhTW: "位於銅座的豚骨拉麵店，週末營業至深夜，是收尾一碗麵的便利選擇。",
+      ko: "도자에 있는 돈코츠 라멘 가게로, 주말에는 새벽까지 영업해 마무리 한 그릇으로 들르기 좋습니다.",
+    },
+
+    menu: [
+      {
+        id: "tonkotsu",
+        name: "Tonkotsu Ramen",
+        nameJa: "豚骨ラーメン",
+        nameI18n: { en: "Tonkotsu Ramen", zhCN: "豚骨拉面", zhTW: "豚骨拉麵", ko: "돈코츠 라멘", ja: "豚骨ラーメン" },
+        img: "menu1.jpg",
+      },
+    ],
+  },
+  {
+    id: "dashibonz",
+    name: "Dashi Bonz",
+    nameJa: "だしぼんず",
+    nameI18n: { en: "Dashi Bonz", zhCN: "Dashi Bonz", zhTW: "Dashi Bonz", ko: "다시본즈", ja: "だしぼんず" },
+    heroDish: { name: { en: "Goto Udon", zhCN: "五岛乌冬", zhTW: "五島烏龍麵", ko: "고토 우동", ja: "五島うどん" }, image: 'exterior.jpg' },
+    category: "Izakaya",
+    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
+    area: "Near Shianbashi",
+    areaJa: "思案橋周辺",
+    areaI18n: { en: "Near Shianbashi", zhCN: "思案桥附近", zhTW: "思案橋附近", ko: "시안바시 근처", ja: "思案橋周辺" },
+
+    geo: { lat: 32.743881, lng: 129.877365 },
+    address: "〒850-0853 長崎県長崎市浜町4-22 明星ビル1F",
+    hours: {
+      sun: ["11:00–22:00"],
+      mon: ["11:00–22:00"],
+      tue: ["11:00–22:00"],
+      wed: ["11:00–22:00"],
+      thu: ["11:00–22:00"],
+      fri: ["11:00–22:00"],
+      sat: ["11:00–22:00"],
+    },
+
+    photoBase: "/shops/dashibonz",
+    exterior: 'exterior.jpg',
+
+    description: {
+      en: "An izakaya specializing in Goto udon — thin, chewy noodles from the Goto Islands served with a rich dashi broth — alongside other Nagasaki-sourced ingredients.",
+      ja: "五島うどんを中心に、長崎の食材を活かした料理を提供する居酒屋。細くてコシのある五島うどんと出汁が自慢です。",
+      zhCN: "以五岛乌冬面为主打的居酒屋，善用长崎当地食材。细滑有嚼劲的五岛乌冬搭配浓郁高汤是招牌。",
+      zhTW: "以五島烏龍麵為主打的居酒屋，善用長崎當地食材。細滑有嚼勁的五島烏龍麵搭配濃郁高湯是招牌。",
+      ko: "고토 우동을 중심으로 나가사키 현지 식재료를 활용하는 이자카야. 가늘고 쫄깃한 고토 우동과 진한 육수가 자랑입니다.",
+    },
+
+    menu: [
+      {
+        id: "goto-udon",
+        name: "Goto Udon",
+        nameJa: "五島うどん",
+        nameI18n: { en: "Goto Udon", zhCN: "五岛乌冬", zhTW: "五島烏龍麵", ko: "고토 우동", ja: "五島うどん" },
+        img: "menu1.jpg",
+      },
+    ],
+  },
+  {
+    id: "sushi-kozo",
+    name: "Sushi Kozo",
+    nameJa: "鮨 幸三",
+    nameI18n: { en: "Sushi Kozo", zhCN: "寿司 幸三", zhTW: "壽司 幸三", ko: "스시 코조", ja: "鮨 幸三" },
+    heroDish: { name: { en: "Chef's Omakase Sushi", zhCN: "主厨精选寿司", zhTW: "主廚精選壽司", ko: "오마카세 스시", ja: "おまかせ寿司" }, image: 'exterior.jpg' },
+    category: "Sushi",
+    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
+    area: "Dōza-machi, Nagasaki",
+    areaJa: "長崎市銅座町",
+    areaI18n: { en: "Dōza-machi, Nagasaki", zhCN: "长崎铜座町", zhTW: "長崎銅座町", ko: "나가사키 도자마치", ja: "長崎市銅座町" },
+
+    geo: { lat: 32.742706, lng: 129.87822 },
+    address: "〒850-0841 長崎県長崎市銅座町12-2",
+    hours: {
+      sun: null,
+      mon: ["18:00–24:00"],
+      tue: ["18:00–24:00"],
+      wed: ["18:00–24:00"],
+      thu: ["18:00–24:00"],
+      fri: ["18:00–24:00"],
+      sat: ["18:00–24:00"],
+    },
+
+    photoBase: "/shops/sushi-kozo",
+    exterior: 'exterior.jpg',
+
+    description: {
+      en: "A counter sushi restaurant in Doza offering chef's-choice courses built around the day's catch — a special-occasion choice for fresh Nagasaki seafood.",
+      ja: "銅座にあるカウンター寿司店。その日仕入れた鮮魚を使ったおまかせコースが中心の、特別な夜に向く一軒です。",
+      zhCN: "位于铜座的吧台寿司店，以当日进货的新鲜海鲜制作主厨精选套餐，适合特别夜晚的选择。",
+      zhTW: "位於銅座的吧檯壽司店，以當日進貨的新鮮海鮮製作主廚精選套餐，適合特別夜晚的選擇。",
+      ko: "도자에 있는 카운터 스시집으로, 그날 들어온 신선한 생선으로 만드는 오마카세 코스가 중심인 특별한 밤을 위한 곳입니다.",
+    },
+
+    menu: [
+      {
+        id: "omakase",
+        name: "Chef's Omakase Sushi",
+        nameJa: "おまかせ寿司",
+        nameI18n: { en: "Chef's Omakase Sushi", zhCN: "主厨精选寿司", zhTW: "主廚精選壽司", ko: "오마카세 스시", ja: "おまかせ寿司" },
+        img: "menu1.jpg",
+      },
+    ],
+  },
+  {
+    id: "koda-shokudo",
+    name: "Koda Shokudo",
+    nameJa: "甲田食堂",
+    nameI18n: { en: "Koda Shokudo", zhCN: "甲田食堂", zhTW: "甲田食堂", ko: "코다 쇼쿠도", ja: "甲田食堂" },
+    heroDish: { name: { en: "Today's Fresh Fish Set Meal", zhCN: "今日鲜鱼定食", zhTW: "今日鮮魚定食", ko: "오늘의 생선 정식", ja: "本日の鮮魚定食" }, image: 'exterior.jpg' },
+    category: "Japanese",
+    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
+    area: "Dōza-machi, Nagasaki",
+    areaJa: "長崎市銅座町",
+    areaI18n: { en: "Dōza-machi, Nagasaki", zhCN: "长崎铜座町", zhTW: "長崎銅座町", ko: "나가사키 도자마치", ja: "長崎市銅座町" },
+
+    geo: { lat: 32.742546, lng: 129.878235 },
+    address: "〒850-0841 長崎県長崎市銅座町15-16",
+    hours: {
+      sun: null,
+      mon: null,
+      tue: ["11:30–18:30"],
+      wed: ["11:30–18:30"],
+      thu: ["11:30–18:30"],
+      fri: ["11:30–18:30"],
+      sat: ["11:30–18:30"],
+    },
+
+    photoBase: "/shops/koda-shokudo",
+    exterior: 'exterior.jpg',
+
+    description: {
+      en: "A set-meal diner run directly by a local fishmonger, serving teishoku built around whatever fresh fish came in that day — simple, honest seafood cooking.",
+      ja: "鮮魚店直営の定食店。その日仕入れた魚を使った定食が中心で、新鮮な魚介を気軽に楽しめます。",
+      zhCN: "由鲜鱼店直营的定食店，以当日进货的鲜鱼制作定食为主，能轻松品尝新鲜海鲜。",
+      zhTW: "由鮮魚店直營的定食店，以當日進貨的鮮魚製作定食為主，能輕鬆品嚐新鮮海鮮。",
+      ko: "생선 가게가 직접 운영하는 정식 식당으로, 그날 들어온 신선한 생선으로 만드는 정식이 중심입니다.",
+    },
+
+    menu: [
+      {
+        id: "fish-teishoku",
+        name: "Today's Fresh Fish Set Meal",
+        nameJa: "本日の鮮魚定食",
+        nameI18n: { en: "Today's Fresh Fish Set Meal", zhCN: "今日鲜鱼定食", zhTW: "今日鮮魚定食", ko: "오늘의 생선 정식", ja: "本日の鮮魚定食" },
+        img: "menu1.jpg",
+      },
+    ],
+  },
 ]
 
 // id から店舗を取得
