@@ -2609,9 +2609,8 @@ export const shops = [
     name: "Kaniya",
     nameJa: "かにや",
     nameI18n: { en: "Kaniya", zhCN: "蟹屋", zhTW: "蟹屋", ko: "카니야", ja: "かにや" },
-    heroDish: { name: { en: "Assorted Onigiri Set", zhCN: "饭团拼盘", zhTW: "飯糰拼盤", ko: "모둠 오니기리", ja: "おにぎり盛り合わせ" }, image: 'exterior.jpg' },
+    heroDish: { name: { en: "Salted Mackerel Onigiri", zhCN: "盐烤鲭鱼饭团", zhTW: "鹽烤鯖魚飯糰", ko: "소금 고등어 오니기리", ja: "塩さば" }, price: "¥280", image: 'exterior.jpg' },
     category: "Japanese",
-    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
     area: "Dōza-machi, Nagasaki",
     areaJa: "長崎市銅座町",
     areaI18n: { en: "Dōza-machi, Nagasaki", zhCN: "长崎铜座町", zhTW: "長崎銅座町", ko: "나가사키 도자마치", ja: "長崎市銅座町" },
@@ -2641,11 +2640,28 @@ export const shops = [
 
     menu: [
       {
-        id: "onigiri-set",
-        name: "Assorted Onigiri Set",
-        nameJa: "おにぎり盛り合わせ",
-        nameI18n: { en: "Assorted Onigiri Set", zhCN: "饭团拼盘", zhTW: "飯糰拼盤", ko: "모둠 오니기리", ja: "おにぎり盛り合わせ" },
+        id: "shio-saba",
+        name: "Salted Mackerel Onigiri",
+        nameJa: "塩さば",
+        nameI18n: { en: "Salted Mackerel Onigiri", zhCN: "盐烤鲭鱼饭团", zhTW: "鹽烤鯖魚飯糰", ko: "소금 고등어 오니기리", ja: "塩さば" },
+        price: "¥280",
         img: "menu1.jpg",
+      },
+      {
+        id: "iwa-nori",
+        name: "Rock Seaweed Onigiri",
+        nameJa: "岩のり",
+        nameI18n: { en: "Rock Seaweed Onigiri", zhCN: "岩海苔饭团", zhTW: "岩海苔飯糰", ko: "바위김 오니기리", ja: "岩のり" },
+        price: "¥280",
+        img: "menu2.jpg",
+      },
+      {
+        id: "takana",
+        name: "Pickled Takana Greens Onigiri",
+        nameJa: "高菜",
+        nameI18n: { en: "Pickled Takana Greens Onigiri", zhCN: "芥菜饭团", zhTW: "芥菜飯糰", ko: "다카나(갓) 절임 오니기리", ja: "高菜" },
+        price: "¥280",
+        img: "menu3.jpg",
       },
     ],
   },
