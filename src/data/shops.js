@@ -669,7 +669,7 @@ export const shops = [
     name: 'Nagasaki Wagyu Yakiniku Pure',
     nameJa: '',
     nameI18n: { en: 'Yakiniku Pure', zhCN: '长崎和牛烤肉 Pure', zhTW: '長崎和牛燒肉 Pure', ko: '야키니쿠 Pure', ja: '長崎和牛焼肉 Pure' },
-    heroDish: { name: { en: 'Thick-Cut Wagyu Karubi', zhCN: '厚切和牛五花', zhTW: '厚切和牛五花', ko: '두툼한 와규 갈비', ja: '厚切り和牛カルビ' }, price: '¥3,190', image: 'menu2.jpg' },
+    heroDish: { name: { en: 'Nagasaki Wagyu Assortment (for 3)', zhCN: '长崎和牛拼盘（3人份）', zhTW: '長崎和牛拼盤（3人份）', ko: '나가사키 와규 모둠 (3인분)', ja: '長崎和牛盛合せ(３人前)' }, price: '¥8,690', image: 'exterior.jpg' },
     category: 'Yakiniku',
     area: 'Near Shinchi Chinatown',
     areaJa: '新地中華街周辺',
@@ -729,107 +729,36 @@ export const shops = [
 
     menu: [
       {
-        id: 'wagyu-assortment',
-        name: 'Premium Nagasaki Wagyu Assortment',
-        nameI18n: { en: 'Premium Nagasaki Wagyu Assortment', zhCN: '长崎和牛顶级拼盘', zhTW: '長崎和牛頂級拼盤', ko: '나가사키 와규 프리미엄 모둠', ja: '長崎和牛プレミアム盛り合わせ' },
-        price: 'Approx. ¥6,000 – ¥8,000 (ideal for 2–3 people)',
+        id: 'wagyu-assortment-3',
+        name: 'Nagasaki Wagyu Assortment (for 3)',
+        nameJa: '長崎和牛盛合せ(３人前)',
+        nameI18n: { en: 'Nagasaki Wagyu Assortment (for 3)', zhCN: '长崎和牛拼盘（3人份）', zhTW: '長崎和牛拼盤（3人份）', ko: '나가사키 와규 모둠 (3인분)', ja: '長崎和牛盛合せ(３人前)' },
+        price: '¥8,690',
         img: 'menu1.jpg',
-        description: {
-          en:
-            'A luxurious platter featuring various highly marbled cuts of Nagasaki ' +
-            'Wagyu, such as sirloin, premium rib (Karubi), and loin (Rosu). It is the ' +
-            'ultimate way to taste and compare different rich textures and ' +
-            'melt-in-your-mouth flavors.',
-          ja:
-            'サーロイン、上カルビ、ロースなど、美しい霜降りの長崎和牛を各部位盛り合わせた' +
-            '贅沢な一皿。とろけるような食感と豊かな旨味を、食べ比べながら存分に味わえます。',
-          zhCN:
-            '汇集西冷、特选五花（Karubi）、里脊（Rosu）等多种油花丰富的长崎和牛部位的豪华' +
-            '拼盘。是品味比较各种入口即化口感与浓郁风味的终极方式。',
-          zhTW:
-            '匯集沙朗、特選五花（Karubi）、里肌（Rosu）等多種油花豐富的長崎和牛部位的豪華' +
-            '拼盤。是品味比較各種入口即化口感與濃郁風味的終極方式。',
-          ko:
-            '설로인, 프리미엄 갈비(카루비), 등심(로스) 등 아름다운 마블링의 나가사키 와규 각 ' +
-            '부위를 모은 호화로운 모둠입니다. 각기 다른 부위의 진한 식감과 입안에서 녹아내리는 ' +
-            '풍미를 비교하며 맛볼 수 있는 최고의 방법입니다.',
-        },
       },
       {
-        id: 'wagyu-sirloin-karubi',
-        name: 'Thick-Cut Karubi',
-        nameI18n: { en: 'Thick-Cut Karubi', zhCN: '厚切五花烤肉', zhTW: '厚切五花烤肉', ko: '두껍게 썬 갈비', ja: '厚切りカルビ' },
-        price: '¥3,190',
+        id: 'special-3-assortment',
+        name: 'Special 3-Cut Assortment',
+        nameJa: '特選３種盛合せ',
+        nameI18n: { en: 'Special 3-Cut Assortment', zhCN: '特选三种拼盘', zhTW: '特選三種拼盤', ko: '특선 3종 모둠', ja: '特選３種盛合せ' },
+        price: '¥5,390',
         img: 'menu2.jpg',
-        description: {
-          en:
-            'Thickly sliced cuts of top-grade Nagasaki Wagyu grilled directly over ' +
-            'heat at your table. Simply seasoned with a touch of sea salt and freshly ' +
-            "grated wasabi to highlight the beef's natural, rich Umami.",
-          ja:
-            '厚切りにした最上級の長崎和牛を、テーブルで直火焼きに。シンプルに岩塩とおろしたての' +
-            'わさびだけで味付けし、お肉本来の豊かな旨味を引き立てます。',
-          zhCN:
-            '厚切顶级长崎和牛，在餐桌上直接明火烤制。仅以少许海盐和现磨山葵简单调味，衬托出' +
-            '牛肉天然浓郁的鲜味。',
-          zhTW:
-            '厚切頂級長崎和牛，在餐桌上直接明火烤製。僅以少許海鹽和現磨山葵簡單調味，襯托出' +
-            '牛肉天然濃郁的鮮味。',
-          ko:
-            '두툼하게 썬 최상급 나가사키 와규를 테이블에서 직접 불에 구워 드립니다. 소금과 ' +
-            '갓 간 와사비로 심플하게 간을 하여 고기 본연의 진한 감칠맛을 살렸습니다.',
-        },
       },
       {
-        id: 'cold-noodles-bibimbap',
-        name: 'Cold Noodles',
-        nameI18n: { en: 'Cold Noodles', zhCN: '冷面', zhTW: '冷麵', ko: '냉면', ja: '冷麺' },
-        price: '¥1,078',
+        id: 'thick-karubi-2way',
+        name: 'Thick-Cut Karubi, 2-Way',
+        nameJa: '厚切りカルビの２種盛り',
+        nameI18n: { en: 'Thick-Cut Karubi, 2-Way', zhCN: '厚切五花两种拼盘', zhTW: '厚切五花兩種拼盤', ko: '두꺼운 갈비 2종 모둠', ja: '厚切りカルビの２種盛り' },
+        price: '¥3,190',
         img: 'menu3.jpg',
-        description: {
-          en:
-            'A perfect side dish or meal-closer to go with rich BBQ. The refreshing, ' +
-            'chewy Japanese-style cold noodles (Reimen) serve as a fantastic palate ' +
-            'cleanser after enjoying flavorful Wagyu meats.',
-          ja:
-            'こってりとした焼肉によく合う、サイドメニューやお食事の締めに最適な一品。さっぱり' +
-            'コシのある冷麺は、旨味豊かな和牛を堪能した後の口直しにぴったりです。',
-          zhCN:
-            '是搭配浓郁烤肉的完美配菜，也是收尾的最佳选择。清爽有嚼劲的日式冷面，在享用完' +
-            '风味十足的和牛后，是绝佳的清口小品。',
-          zhTW:
-            '是搭配濃郁烤肉的完美配菜，也是收尾的最佳選擇。清爽有嚼勁的日式冷麵，在享用完' +
-            '風味十足的和牛後，是絕佳的清口小品。',
-          ko:
-            '진한 맛의 야키니쿠와 잘 어울리는 사이드 메뉴이자 식사 마무리로 완벽한 메뉴입니다. ' +
-            '상큼하고 쫄깃한 일본식 냉면(레이멘)은 풍미 가득한 와규를 즐긴 후 입안을 개운하게 ' +
-            '정리해줍니다.',
-        },
       },
       {
-        id: 'highball-beer',
-        name: 'Nagasaki Local Sake',
-        nameI18n: { en: 'Nagasaki Local Sake', zhCN: '长崎地酒', zhTW: '長崎地酒', ko: '나가사키 지역 사케', ja: '長崎の地酒' },
-        price: 'Approx. ¥800 – ¥1,200 per glass',
+        id: '5000yen-course',
+        name: '¥5,000 Course',
+        nameJa: '５０００円コース',
+        nameI18n: { en: '¥5,000 Course', zhCN: '5000日元套餐', zhTW: '5000日圓套餐', ko: '5000엔 코스', ja: '５０００円コース' },
+        price: '¥5,500',
         img: 'menu4.jpg',
-        description: {
-          en:
-            'Premium local Japanese sake produced in Nagasaki Prefecture. Served ' +
-            'chilled, these sakes offer a clean, crisp finish that pairs exquisitely ' +
-            'with the rich, savory flavors of grilled Nagasaki Wagyu beef.',
-          ja:
-            '長崎県内で造られる上質な地酒。冷やして提供され、すっきりとキレのある味わいが、' +
-            '濃厚でコクのある長崎和牛の焼肉と絶妙にマッチします。',
-          zhCN:
-            '长崎县内酿造的优质地方清酒。冰镇供应，口感清爽利落，与浓郁醇厚的长崎和牛烤肉' +
-            '相得益彰。',
-          zhTW:
-            '長崎縣內釀造的優質地方清酒。冰鎮供應，口感清爽俐落，與濃郁醇厚的長崎和牛烤肉' +
-            '相得益彰。',
-          ko:
-            '나가사키현에서 생산되는 고급 지역 사케입니다. 차갑게 제공되며, 깔끔하고 산뜻한 ' +
-            '끝맛이 진하고 감칠맛 넘치는 나가사키 와규 구이와 절묘하게 어우러집니다.',
-        },
       },
     ],
   },
