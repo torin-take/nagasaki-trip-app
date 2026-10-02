@@ -2672,7 +2672,6 @@ export const shops = [
     nameI18n: { en: "Yakitori Ren", zhCN: "烤鸡肉串 莲", zhTW: "烤雞肉串 蓮", ko: "야키토리 렌", ja: "焼鳥 蓮" },
     heroDish: { name: { en: "Assorted Yakitori Skewers", zhCN: "烤鸡肉串拼盘", zhTW: "烤雞肉串拼盤", ko: "모둠 야키토리", ja: "焼き鳥盛り合わせ" }, image: 'exterior.jpg' },
     category: "Izakaya",
-    unverified: true, // 新規追加・住所/営業時間はWeb検索を基にした未確認情報。地図上では青ピンで表示される。
     area: "Dōza-machi, Nagasaki",
     areaJa: "長崎市銅座町",
     areaI18n: { en: "Dōza-machi, Nagasaki", zhCN: "长崎铜座町", zhTW: "長崎銅座町", ko: "나가사키 도자마치", ja: "長崎市銅座町" },
