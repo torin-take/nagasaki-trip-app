@@ -1446,6 +1446,28 @@ export const shops = [
         },
       },
       {
+        id: 'sweet-sour-pork',
+        name: 'Sweet and Sour Pork',
+        nameJa: '酢豚',
+        nameI18n: { en: 'Sweet and Sour Pork', zhCN: '糖醋肉', zhTW: '糖醋肉', ko: '탕수육', ja: '酢豚' },
+        img: 'menu5.jpg',
+        description: {
+          en:
+            'Bite-sized fried pork tossed with onion, bell pepper, and pineapple in a ' +
+            'tangy-sweet sauce — a comforting classic on any Chinese-restaurant table.',
+          ja:
+            '一口大の豚肉を揚げ、玉ねぎ・ピーマン・パイナップルと共に甘酢あんで仕上げた' +
+            '定番の一皿です。',
+          zhCN:
+            '一口大小的炸猪肉，与洋葱、青椒、菠萝一同裹上酸甜芡汁，是中餐桌上的经典家常菜。',
+          zhTW:
+            '一口大小的炸豬肉，與洋蔥、青椒、鳳梨一同裹上酸甜芡汁，是中餐桌上的經典家常菜。',
+          ko:
+            '한입 크기로 튀긴 돼지고기를 양파, 피망, 파인애플과 함께 새콤달콤한 소스로 ' +
+            '버무린 중화요리의 정석입니다.',
+        },
+      },
+      {
         id: 'dongpo-rou',
         name: 'Braised Pork Belly',
         nameJa: '東坡肉',
