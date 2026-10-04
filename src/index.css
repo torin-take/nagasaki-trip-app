@@ -57,6 +57,7 @@ body {
 /* 地図上の店舗ピン（丸い写真バッジ）。MapLibreのMarkerに渡すDOM要素に直接付与するため、
    Tailwindのクラスではなく通常のCSSで定義している（--wr-ring はカテゴリーごとの色）。 */
 .wr-pin {
+  position: relative;
   width: 44px;
   height: 44px;
   border-radius: 9999px;

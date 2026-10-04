@@ -19,6 +19,9 @@ import { CATEGORY_COLOR, FAVORITES_FILTER } from '../walkRingsText.js'
 
 const DEFAULT_COLOR = '#c67139'
 const UNVERIFIED_COLOR = '#2563eb'
+// 店名ラベルを出す拡大率のしきい値。初期表示では出さず、寄ったときだけ名前が並ぶようにする。
+const LABEL_MIN_ZOOM = 15.8
+const labelFor = (shop, code) => shop.nameI18n?.[code] || shop.name
 
 // OpenStreetMapの地名データにある言語別フィールド(name:xx)を、優先順位つきで参照する。
 const NAME_FIELD_CHAINS = {
@@ -112,6 +115,20 @@ export default function MapView({
         (categoryFilter === FAVORITES_FILTER ? favoriteIds?.includes(shop.id) : shop.category === categoryFilter)
       el.style.display = matchesCategory ? 'flex' : 'none'
       el.classList.toggle('wr-pin-selected', shop.id === selectedId)
+    })
+  }
+
+  // 拡大率に応じて、ピンの下に店名ラベルを出し入れする（広域表示では名前が重なるため拡大時だけ）。
+  // 言語が変わったときも、表示中のラベル文字を合わせて差し替える。
+  const applyLabels = () => {
+    const map = mapRef.current
+    if (!map) return
+    const show = map.getZoom() >= LABEL_MIN_ZOOM
+    const code = langRef.current
+    markersRef.current.forEach(({ shop, labelEl }) => {
+      if (!labelEl) return
+      labelEl.textContent = labelFor(shop, code)
+      labelEl.style.display = show ? 'block' : 'none'
     })
   }
 
@@ -230,14 +247,25 @@ export default function MapView({
             onSelectRef.current?.(shop)
           })
 
+          // 店名のラベル。ピンの真下に重ねる（広域表示では隠し、拡大したときだけ出す）。
+          const labelEl = document.createElement('span')
+          labelEl.className =
+            'pointer-events-none absolute left-1/2 top-full mt-1 -translate-x-1/2 whitespace-nowrap rounded-full bg-neutral-100/95 px-2 py-0.5 font-body text-[11px] font-bold leading-tight text-text shadow-organic-sm'
+          labelEl.style.display = 'none'
+          el.appendChild(labelEl)
+
           new maplibregl.Marker({ element: el, anchor: 'bottom' })
             .setLngLat([shop.geo.lng, shop.geo.lat])
             .addTo(map)
 
-          markersRef.current.push({ shop, el })
+          markersRef.current.push({ shop, el, labelEl })
         })
         applyFilters()
+        applyLabels()
       })
+
+      // 拡大率が変わるたびに店名ラベルの出し入れを判定する
+      map.on('zoom', applyLabels)
     }
 
     init()
@@ -261,6 +289,8 @@ export default function MapView({
     document.querySelectorAll('[data-ring-label]').forEach((el) => {
       el.textContent = `${el.dataset.ringLabel} ${RING_LABEL.min[lang] || RING_LABEL.min.en}`
     })
+    applyLabels()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lang])
 
   // 絞り込み・選択状態が変わるたびに、既存のピンの表示/選択だけを更新する
