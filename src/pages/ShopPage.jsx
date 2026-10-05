@@ -161,6 +161,7 @@ export default function ShopPage() {
               variant="menu"
               label={tt('menu', lang)}
               alt={tt('menu', lang)}
+              fit="contain"
               className="aspect-[4/3] w-full"
             />
           </div>
@@ -179,6 +180,7 @@ export default function ShopPage() {
                   variant="menu"
                   label={mName}
                   alt={mName}
+                  fit="contain"
                   className="aspect-square w-full"
                 />
                 <div className="px-3 py-2">

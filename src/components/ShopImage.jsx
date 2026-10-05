@@ -4,7 +4,7 @@ import { useState } from 'react'
 // src の画像が読み込めればそれを表示、無い/失敗ならテーマに合った
 // プレースホルダー枠（淡いグラデ＋アイコン＋ラベル）を表示する。
 // → 後で public/shops/<id>/ に実写真を置くだけで自動で切り替わる。
-export default function ShopImage({ src, alt, label, variant = 'menu', className = '' }) {
+export default function ShopImage({ src, alt, label, variant = 'menu', fit = 'cover', className = '' }) {
   const [failed, setFailed] = useState(false)
   const showImg = src && !failed
 
@@ -15,7 +15,7 @@ export default function ShopImage({ src, alt, label, variant = 'menu', className
           src={src}
           alt={alt || label || ''}
           onError={() => setFailed(true)}
-          className="h-full w-full object-cover"
+          className={`h-full w-full ${fit === 'contain' ? 'object-contain' : 'object-cover'}`}
           loading="lazy"
         />
       ) : (
