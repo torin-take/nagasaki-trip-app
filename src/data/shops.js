@@ -40,7 +40,7 @@ export const shops = [
 
     // 現・仮マップ用の位置（%座標）
     map: { x: 56, y: 42 },
-    geo: { lat: 32.74271, lng: 129.877197 },
+    geo: { lat: 32.742689, lng: 129.877118 },
     address: '〒850-0841 長崎県長崎市銅座町7-9 1F',
     hours: {
       sun: ['17:00–24:00'],
@@ -215,7 +215,7 @@ export const shops = [
 
     // 現・仮マップ用の位置（%座標）※長崎駅寄り（港側）に配置
     map: { x: 16, y: 20 },
-    geo: { lat: 32.753357, lng: 129.871506 },
+    geo: { lat: 32.753413, lng: 129.871628 },
     address: '〒850-0057 長崎県長崎市大黒町2-1',
     hours: {
       sun: ['17:00–01:00'],
@@ -366,8 +366,8 @@ export const shops = [
 
     // 現・仮マップ用の位置（%座標）※思案橋寄り
     map: { x: 36, y: 80 },
-    geo: { lat: 32.742664, lng: 129.88118 },
-    address: '〒850-0832 長崎県長崎市油屋町1-14 しあんばしビル 3F',
+    geo: { lat: 32.742575, lng: 129.880946 },
+    address: '〒850-0832 長崎県長崎市油屋町1-14 しあんばしビル3F',
     hours: {
       sun: ['12:00–20:00'],
       mon: ['12:00–20:00'],
@@ -537,7 +537,7 @@ export const shops = [
 
     // 現・仮マップ用の位置（%座標）※思案橋エリア
     map: { x: 84, y: 76 },
-    geo: { lat: 32.742786, lng: 129.879578 },
+    geo: { lat: 32.74273, lng: 129.879678 },
     address: '〒850-0901 長崎県長崎市本石灰町1-9',
     hours: {
       sun: null, // 定休日
@@ -677,7 +677,7 @@ export const shops = [
 
     // 現・仮マップ用の位置（%座標）※新地中華街寄り（中央）
     map: { x: 40, y: 58 },
-    geo: { lat: 32.741982, lng: 129.874863 },
+    geo: { lat: 32.741989, lng: 129.874765 },
     address: '〒850-0842 長崎県長崎市新地町2-7',
     hours: {
       sun: ['11:00–14:00', '17:00–21:00'],
@@ -776,7 +776,7 @@ export const shops = [
 
     // 現・仮マップ用の位置（%座標）※思案橋エリア
     map: { x: 66, y: 62 },
-    geo: { lat: 32.741848, lng: 129.879654 },
+    geo: { lat: 32.741926, lng: 129.879509 },
     address: '〒850-0901 長崎県長崎市本石灰町5-14',
     hours: {
       sun: null, // 定休日
@@ -934,8 +934,8 @@ export const shops = [
 
     // 現・仮マップ用の位置（%座標）※思案橋（電停横）
     map: { x: 82, y: 40 },
-    geo: { lat: 32.743011, lng: 129.880249 },
-    address: '〒850-0832 長崎県長崎市油屋町1-2 モトビル 3F',
+    geo: { lat: 32.742999, lng: 129.880286 },
+    address: '〒850-0832 長崎県長崎市油屋町1-2 モトビル3F',
     hours: {
       sun: ['19:00–01:00'],
       mon: ['19:00–03:00'],
@@ -1099,8 +1099,8 @@ export const shops = [
 
     // 現・仮マップ用の位置（%座標）※思案橋・銅座エリア
     map: { x: 70, y: 90 },
-    geo: { lat: 32.745056, lng: 129.878876 },
-    address: '〒850-0852 長崎県長崎市万屋町4-13 二葉屋ビル 3F',
+    geo: { lat: 32.745117, lng: 129.878921 },
+    address: '〒850-0852 長崎県長崎市万屋町4-13 二葉屋ビル3F',
     hours: {
       sun: ['17:30–23:00'],
       mon: ['17:30–23:00'],
@@ -1269,7 +1269,7 @@ export const shops = [
     areaI18n: { en: 'Shinchi Chinatown', zhCN: '新地中华街', zhTW: '新地中華街', ko: '신치 차이나타운', ja: '長崎市新地町' },
 
     map: { x: 44, y: 46 },
-    geo: { lat: 32.741222, lng: 129.87587 },
+    geo: { lat: 32.741218, lng: 129.875803 },
     address: '〒850-0842 長崎県長崎市新地町13-13',
     hours: {
       sun: ['11:00–15:00', '17:00–20:30'],
@@ -1463,7 +1463,7 @@ export const shops = [
     areaI18n: { en: 'Shinchi Chinatown', zhCN: '新地中华街', zhTW: '新地中華街', ko: '신치 차이나타운', ja: '長崎市新地町' },
 
     map: { x: 42, y: 48 },
-    geo: { lat: 32.741982, lng: 129.875717 },
+    geo: { lat: 32.741892, lng: 129.87576 },
     address: '〒850-0842 長崎県長崎市新地町10-16',
     hours: {
       sun: ['11:00–14:30', '17:00–19:50'],
@@ -1636,7 +1636,7 @@ export const shops = [
     areaI18n: { en: 'Shinchi Chinatown', zhCN: '新地中华街', zhTW: '新地中華街', ko: '신치 차이나타운', ja: '長崎市新地町' },
 
     map: { x: 40, y: 47 },
-    geo: { lat: 32.741905, lng: 129.875595 },
+    geo: { lat: 32.741977, lng: 129.875611 },
     address: '〒850-0842 長崎県長崎市新地町9-7',
     hours: {
       sun: ['11:00–14:30', '17:00–19:30'],
@@ -1813,7 +1813,7 @@ export const shops = [
     areaI18n: { en: 'Shinchi Chinatown', zhCN: '新地中华街', zhTW: '新地中華街', ko: '신치 차이나타운', ja: '長崎市新地町' },
 
     map: { x: 41, y: 50 },
-    geo: { lat: 32.74094, lng: 129.875504 },
+    geo: { lat: 32.740943, lng: 129.875528 },
     address: '〒850-0842 長崎県長崎市新地町12-7',
     hours: {
       sun: ['11:30–14:30', '17:00–21:30'],
@@ -1980,7 +1980,7 @@ export const shops = [
     areaI18n: { en: 'Shinchi Chinatown', zhCN: '新地中华街', zhTW: '新地中華街', ko: '신치 차이나타운', ja: '長崎市新地町' },
 
     map: { x: 39, y: 49 },
-    geo: { lat: 32.742134, lng: 129.874985 },
+    geo: { lat: 32.742112, lng: 129.874977 },
     address: '〒850-0842 長崎県長崎市新地町2-5',
     hours: {
       sun: ['11:00–14:00', '17:00–20:00'],
@@ -2150,7 +2150,7 @@ export const shops = [
     areaJa: "思案橋",
     areaI18n: { en: "Shianbashi", zhCN: "思案桥", zhTW: "思案橋", ko: "시안바시", ja: "思案橋" },
 
-    geo: { lat: 32.743095, lng: 129.87915 },
+    geo: { lat: 32.74309, lng: 129.87923 },
     address: "〒850-0853 長崎県長崎市浜町6-17",
     hours: {
       sun: ["11:00–15:00", "17:00–01:30"],
@@ -2209,8 +2209,8 @@ export const shops = [
     areaJa: "思案橋周辺",
     areaI18n: { en: "Near Shianbashi", zhCN: "思案桥附近", zhTW: "思案橋附近", ko: "시안바시 근처", ja: "思案橋周辺" },
 
-    geo: { lat: 32.743137, lng: 129.880661 },
-    address: "〒850-0832 長崎県長崎市油屋町2-47",
+    geo: { lat: 32.743139, lng: 129.880679 },
+    address: "〒850-0832 長崎県長崎市油屋町2-47 リバソンクレインビル（2フロア営業）",
     hours: {
       sun: ["09:00–21:00"],
       mon: ["09:00–21:00"],
@@ -2274,7 +2274,7 @@ export const shops = [
     areaJa: "思案橋・銅座周辺",
     areaI18n: { en: "Near Shianbashi & Doza", zhCN: "思案桥・铜座附近", zhTW: "思案橋・銅座附近", ko: "시안바시・도자 근처", ja: "思案橋・銅座周辺" },
 
-    geo: { lat: 32.743282, lng: 129.881302 },
+    geo: { lat: 32.743355, lng: 129.881361 },
     address: "〒850-0831 長崎県長崎市鍛冶屋町6-50",
     hours: {
       sun: ["11:00–15:00", "17:00–21:30"],
@@ -2353,8 +2353,8 @@ export const shops = [
     areaJa: "思案橋周辺",
     areaI18n: { en: "Near Shianbashi", zhCN: "思案桥附近", zhTW: "思案橋附近", ko: "시안바시 근처", ja: "思案橋周辺" },
 
-    geo: { lat: 32.744514, lng: 129.878799 },
-    address: "〒850-0853 長崎県長崎市浜町8-9",
+    geo: { lat: 32.744506, lng: 129.878775 },
+    address: "〒850-0853 長崎県長崎市浜町8-9 独立建物（1F玄関・2F客席）",
     hours: {
       sun: ["11:00–21:00"],
       mon: ["11:00–21:00"],
@@ -2414,8 +2414,8 @@ export const shops = [
     areaJa: "思案橋",
     areaI18n: { en: "Shianbashi", zhCN: "思案桥", zhTW: "思案橋", ko: "시안바시", ja: "思案橋" },
 
-    geo: { lat: 32.743576, lng: 129.880524 },
-    address: "〒850-0853 長崎県長崎市浜町11-11",
+    geo: { lat: 32.743551, lng: 129.880504 },
+    address: "〒850-0853 長崎県長崎市浜町11-11 和田ビル1F",
     hours: {
       sun: ["17:00–24:00"],
       mon: ["17:00–24:00"],
@@ -2479,7 +2479,7 @@ export const shops = [
     areaJa: "思案橋",
     areaI18n: { en: "Shianbashi", zhCN: "思案桥", zhTW: "思案橋", ko: "시안바시", ja: "思案橋" },
 
-    geo: { lat: 32.743225, lng: 129.87854 },
+    geo: { lat: 32.74319, lng: 129.878607 },
     address: "〒850-0853 長崎県長崎市浜町6-23",
     hours: {
       sun: ["11:00–01:00"],
@@ -2544,7 +2544,7 @@ export const shops = [
     areaJa: "長崎市銅座町",
     areaI18n: { en: "Dōza-machi, Nagasaki", zhCN: "长崎铜座町", zhTW: "長崎銅座町", ko: "나가사키 도자마치", ja: "長崎市銅座町" },
 
-    geo: { lat: 32.742653, lng: 129.877487 },
+    geo: { lat: 32.742597, lng: 129.877419 },
     address: "〒850-0841 長崎県長崎市銅座町10-2",
     hours: {
       sun: null,
@@ -2605,8 +2605,8 @@ export const shops = [
     areaJa: "長崎市銅座町",
     areaI18n: { en: "Dōza-machi, Nagasaki", zhCN: "长崎铜座町", zhTW: "長崎銅座町", ko: "나가사키 도자마치", ja: "長崎市銅座町" },
 
-    geo: { lat: 32.743298, lng: 129.87764 },
-    address: "〒850-0841 長崎県長崎市銅座町6-8 HANA銅座ビル1F",
+    geo: { lat: 32.743295, lng: 129.877621 },
+    address: "〒850-0841 長崎県長崎市銅座町6-6 HANA銅座ビル1F",
     hours: {
       sun: ["18:00–22:00"],
       mon: ["18:00–22:00"],
@@ -2691,8 +2691,8 @@ export const shops = [
     areaJa: "長崎市銅座町",
     areaI18n: { en: "Dōza-machi, Nagasaki", zhCN: "长崎铜座町", zhTW: "長崎銅座町", ko: "나가사키 도자마치", ja: "長崎市銅座町" },
 
-    geo: { lat: 32.743206, lng: 129.877563 },
-    address: "〒850-0841 長崎県長崎市銅座町6-9",
+    geo: { lat: 32.743223, lng: 129.877514 },
+    address: "〒850-0841 長崎県長崎市銅座町6-9 徳山銅座ビル（階不明）",
     hours: {
       sun: ["11:00–03:00"],
       mon: ["11:00–03:00"],
@@ -2767,7 +2767,7 @@ export const shops = [
     areaJa: "思案橋周辺",
     areaI18n: { en: "Near Shianbashi", zhCN: "思案桥附近", zhTW: "思案橋附近", ko: "시안바시 근처", ja: "思案橋周辺" },
 
-    geo: { lat: 32.743881, lng: 129.877365 },
+    geo: { lat: 32.743882, lng: 129.87738 },
     address: "〒850-0853 長崎県長崎市浜町4-22 明星ビル1F",
     hours: {
       sun: ["11:00–22:00"],
@@ -2828,8 +2828,8 @@ export const shops = [
     areaJa: "長崎市銅座町",
     areaI18n: { en: "Dōza-machi, Nagasaki", zhCN: "长崎铜座町", zhTW: "長崎銅座町", ko: "나가사키 도자마치", ja: "長崎市銅座町" },
 
-    geo: { lat: 32.742706, lng: 129.87822 },
-    address: "〒850-0841 長崎県長崎市銅座町12-2",
+    geo: { lat: 32.742663, lng: 129.878222 },
+    address: "〒850-0841 長崎県長崎市銅座町12-2 モロッコビル（階不明）",
     hours: {
       sun: null,
       mon: ["18:00–24:00"],
@@ -2874,8 +2874,8 @@ export const shops = [
     areaJa: "長崎市銅座町",
     areaI18n: { en: "Dōza-machi, Nagasaki", zhCN: "长崎铜座町", zhTW: "長崎銅座町", ko: "나가사키 도자마치", ja: "長崎市銅座町" },
 
-    geo: { lat: 32.742546, lng: 129.878235 },
-    address: "〒850-0841 長崎県長崎市銅座町15-16",
+    geo: { lat: 32.74305, lng: 129.878301 },
+    address: "〒850-0841 長崎県長崎市銅座町14-6 名店ビル2F",
     hours: {
       sun: null,
       mon: null,
